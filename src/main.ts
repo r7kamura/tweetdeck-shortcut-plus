@@ -13,6 +13,7 @@ import {
   openUrlOfSelectedTweetUserInBackground,
   removeSelectedColumn,
   selectImageInSelectedTweet,
+  selectQuoteInSelectedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -53,6 +54,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+o":
       selectImageInSelectedTweet();
+      break;
+    case "alt+q":
+      selectQuoteInSelectedTweet();
       break;
     case "alt+d":
       removeSelectedColumn();

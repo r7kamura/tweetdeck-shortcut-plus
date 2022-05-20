@@ -83,7 +83,14 @@ export function removeSelectedColumn() {
 export function selectImageInSelectedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
-  ) as HTMLAnchorElement | null;
+  ) as HTMLElement | null;
+  element?.click();
+}
+
+export function selectQuoteInSelectedTweet() {
+  const element = document.querySelector(
+    ".is-selected-tweet .js-quote-detail"
+  ) as HTMLElement | null;
   element?.click();
 }
 

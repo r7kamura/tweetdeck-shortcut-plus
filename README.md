@@ -54,6 +54,10 @@ Open URL of selected tweet likes in the background tab.
 
 Select image in selected tweet.
 
+### <kbd>Alt+Q</kbd>
+
+Select quoted tweet in selected tweet.
+
 ### <kbd>Alt+D</kbd>
 
 Remove column containing selected tweet.
