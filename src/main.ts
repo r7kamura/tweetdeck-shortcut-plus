@@ -3,6 +3,8 @@ import {
   copyUrlOfSelectedTweet,
   openUrlInSelectedTweet,
   openUrlInSelectedTweetInBackground,
+  openUrlOfSelectedTweet,
+  openUrlOfSelectedTweetInBackground,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -16,6 +18,12 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "ctrl+c":
       copyUrlOfSelectedTweet();
+      break;
+    case "alt+t":
+      openUrlOfSelectedTweet();
+      break;
+    case "ctrl+alt+t":
+      openUrlOfSelectedTweetInBackground();
       break;
   }
 }
