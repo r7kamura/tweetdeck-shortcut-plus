@@ -64,7 +64,7 @@ export function openUrlOfSelectedTweetUserInBackground() {
 function getUrlInSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
-    ?.getAttribute("href");
+    ?.getAttribute("data-full-url");
 }
 
 function getUrlOfSelectedTweet() {
