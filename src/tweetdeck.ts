@@ -47,6 +47,20 @@ export function openUrlOfSelectedTweetInBackground() {
   }
 }
 
+export function openUrlOfSelectedTweetLikes() {
+  const url = getUrlOfSelectedTweetLikes();
+  if (url) {
+    openForegroundTab(url);
+  }
+}
+
+export function openUrlOfSelectedTweetLikesInBackground() {
+  const url = getUrlOfSelectedTweetLikes();
+  if (url) {
+    openBackgroundTab(url);
+  }
+}
+
 export function openUrlOfSelectedTweetUser() {
   const url = getUrlOfSelectedTweetUser();
   if (url) {
@@ -71,6 +85,15 @@ function getUrlOfSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet a[rel='url']")
     ?.getAttribute("href");
+}
+
+function getUrlOfSelectedTweetLikes() {
+  const url = getUrlOfSelectedTweet();
+  if (url) {
+    return `${url}/likes`;
+  } else {
+    return null;
+  }
 }
 
 function getUrlOfSelectedTweetUser() {

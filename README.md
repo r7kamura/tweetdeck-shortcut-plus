@@ -32,12 +32,20 @@ Copy URL of selected tweet.
 
 ### <kbd>Alt+U</kbd>
 
-Open URL of selected tweet's user.
+Open URL of selected tweet user.
 
 ### <kbd>Ctrl+Alt+U</kbd>
 
-Open URL of selected tweet's user in the background tab.
+Open URL of selected tweet user in the background tab.
 
 ### <kbd>Shift+Alt+U</kbd>
 
-Copy URL of selected tweet's user.
+Copy URL of selected tweet user.
+
+### <kbd>Alt+L</kbd>
+
+Open URL of selected tweet likes.
+
+### <kbd>Ctrl+Alt+L</kbd>
+
+Open URL of selected tweet likes in the background tab.
