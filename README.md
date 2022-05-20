@@ -13,3 +13,7 @@ Open URL in selected tweet.
 ### <kbd>Ctrl+Alt+L</kbd>
 
 Open URL in selected tweet in the background tab.
+
+### <kbd>Ctrl+C</kbd>
+
+Copy URL of selected tweet.

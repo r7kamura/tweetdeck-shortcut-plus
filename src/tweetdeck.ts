@@ -1,3 +1,10 @@
+export function copyUrlOfSelectedTweet() {
+  const url = getUrlOfSelectedTweet();
+  if (url) {
+    copy({ plain: url });
+  }
+}
+
 export function openUrlInSelectedTweet() {
   const url = getUrlInSelectedTweet();
   if (url) {
@@ -15,6 +22,12 @@ export function openUrlInSelectedTweetInBackground() {
 function getUrlInSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
+    ?.getAttribute("href");
+}
+
+function getUrlOfSelectedTweet() {
+  return document
+    .querySelector(".is-selected-tweet a[rel='url']")
     ?.getAttribute("href");
 }
 
@@ -44,4 +57,14 @@ function openBackgroundTab(url: string) {
     null
   );
   a.dispatchEvent(event);
+}
+
+function copy({ plain }: { plain: string }) {
+  const listener = (event: any) => {
+    event.clipboardData.setData("text/plain", plain);
+    event.preventDefault();
+  };
+  document.addEventListener("copy", listener);
+  document.execCommand("copy");
+  document.removeEventListener("copy", listener);
 }
