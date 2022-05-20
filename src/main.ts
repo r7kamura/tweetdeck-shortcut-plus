@@ -11,7 +11,7 @@ import {
   openUrlOfSelectedTweetLikesInBackground,
   openUrlOfSelectedTweetUser,
   openUrlOfSelectedTweetUserInBackground,
-  showImageInSelectedTweet,
+  selectImageInSelectedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -51,7 +51,7 @@ function onKeydown(event: KeyboardEvent) {
       openUrlOfSelectedTweetLikesInBackground();
       break;
     case "alt+o":
-      showImageInSelectedTweet();
+      selectImageInSelectedTweet();
       break;
     case "alt+d":
       const holder = document

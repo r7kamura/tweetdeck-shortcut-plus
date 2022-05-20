@@ -80,7 +80,7 @@ export function removeSelectedColumn() {
   findSelectedColumnRemoveButton()?.click();
 }
 
-export function showImageInSelectedTweet() {
+export function selectImageInSelectedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLAnchorElement | null;
