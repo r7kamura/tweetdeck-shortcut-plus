@@ -1,7 +1,21 @@
+export function copyUrlInSelectedTweet() {
+  const url = getUrlInSelectedTweet();
+  if (url) {
+    copy(url);
+  }
+}
+
 export function copyUrlOfSelectedTweet() {
   const url = getUrlOfSelectedTweet();
   if (url) {
-    copy({ plain: url });
+    copy(url);
+  }
+}
+
+export function copyUrlOfSelectedTweetUser() {
+  const url = getUrlOfSelectedTweetUser();
+  if (url) {
+    copy(url);
   }
 }
 
@@ -93,9 +107,9 @@ function openBackgroundTab(url: string) {
   a.dispatchEvent(event);
 }
 
-function copy({ plain }: { plain: string }) {
+function copy(value: string) {
   const listener = (event: any) => {
-    event.clipboardData.setData("text/plain", plain);
+    event.clipboardData.setData("text/plain", value);
     event.preventDefault();
   };
   document.addEventListener("copy", listener);

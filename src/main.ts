@@ -1,6 +1,8 @@
 import { detectKeyString } from "./key";
 import {
+  copyUrlInSelectedTweet,
   copyUrlOfSelectedTweet,
+  copyUrlOfSelectedTweetUser,
   openUrlInSelectedTweet,
   openUrlInSelectedTweetInBackground,
   openUrlOfSelectedTweet,
@@ -18,8 +20,8 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+l":
       openUrlInSelectedTweetInBackground();
       break;
-    case "alt+c":
-      copyUrlOfSelectedTweet();
+    case "shift+alt+l":
+      copyUrlInSelectedTweet();
       break;
     case "alt+t":
       openUrlOfSelectedTweet();
@@ -27,12 +29,21 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+t":
       openUrlOfSelectedTweetInBackground();
       break;
+    case "shift+alt+t":
+      copyUrlOfSelectedTweet();
+      break;
     case "alt+u":
       openUrlOfSelectedTweetUser();
       break;
     case "ctrl+alt+u":
       openUrlOfSelectedTweetUserInBackground();
       break;
+    case "shift+alt+u":
+      copyUrlOfSelectedTweetUser();
+      break;
+    default:
+      console.log(keyString);
+
   }
 }
 
