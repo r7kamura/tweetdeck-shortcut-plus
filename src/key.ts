@@ -15,7 +15,7 @@ export function detectKeyString(event: KeyboardEvent): string {
     segments.push("Meta");
   }
   if (!ignoredKeys.has(event.key)) {
-    segments.push(event.key);
+    segments.push(event.key.toUpperCase());
   }
   return segments.join("+");
 }
