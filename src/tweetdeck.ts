@@ -19,6 +19,20 @@ export function openUrlInSelectedTweetInBackground() {
   }
 }
 
+export function openUrlOfSelectedTweet() {
+  const url = getUrlOfSelectedTweet();
+  if (url) {
+    openForegroundTab(url);
+  }
+}
+
+export function openUrlOfSelectedTweetInBackground() {
+  const url = getUrlOfSelectedTweet();
+  if (url) {
+    openBackgroundTab(url);
+  }
+}
+
 function getUrlInSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
