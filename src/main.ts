@@ -41,9 +41,6 @@ function onKeydown(event: KeyboardEvent) {
     case "shift+alt+u":
       copyUrlOfSelectedTweetUser();
       break;
-    default:
-      console.log(keyString);
-
   }
 }
 
