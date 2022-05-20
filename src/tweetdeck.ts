@@ -12,8 +12,8 @@ export function copyUrlOfSelectedTweet() {
   }
 }
 
-export function copyUrlOfSelectedTweetUser() {
-  const url = getUrlOfSelectedTweetUser();
+export function copyUrlOfSelectedTweetAuthor() {
+  const url = getUrlOfSelectedTweetAuthor();
   if (url) {
     copy(url);
   }
@@ -61,15 +61,15 @@ export function openUrlOfSelectedTweetLikesInBackground() {
   }
 }
 
-export function openUrlOfSelectedTweetUser() {
-  const url = getUrlOfSelectedTweetUser();
+export function openUrlOfSelectedTweetAuthor() {
+  const url = getUrlOfSelectedTweetAuthor();
   if (url) {
     openForegroundTab(url);
   }
 }
 
-export function openUrlOfSelectedTweetUserInBackground() {
-  const url = getUrlOfSelectedTweetUser();
+export function openUrlOfSelectedTweetAuthorInBackground() {
+  const url = getUrlOfSelectedTweetAuthor();
   if (url) {
     openBackgroundTab(url);
   }
@@ -136,7 +136,7 @@ function getUrlOfSelectedTweetLikes() {
   }
 }
 
-function getUrlOfSelectedTweetUser() {
+function getUrlOfSelectedTweetAuthor() {
   return document
     .querySelector(".is-selected-tweet a[rel='user']")
     ?.getAttribute("href");

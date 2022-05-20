@@ -2,15 +2,15 @@ import { detectKeyString } from "./key";
 import {
   copyUrlInSelectedTweet,
   copyUrlOfSelectedTweet,
-  copyUrlOfSelectedTweetUser,
+  copyUrlOfSelectedTweetAuthor,
   openUrlInSelectedTweet,
   openUrlInSelectedTweetInBackground,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetInBackground,
   openUrlOfSelectedTweetLikes,
   openUrlOfSelectedTweetLikesInBackground,
-  openUrlOfSelectedTweetUser,
-  openUrlOfSelectedTweetUserInBackground,
+  openUrlOfSelectedTweetAuthor,
+  openUrlOfSelectedTweetAuthorInBackground,
   removeSelectedColumn,
   selectHashtagInSelectedTweet,
   selectImageInSelectedTweet,
@@ -39,13 +39,13 @@ function onKeydown(event: KeyboardEvent) {
       copyUrlOfSelectedTweet();
       break;
     case "alt+u":
-      openUrlOfSelectedTweetUser();
+      openUrlOfSelectedTweetAuthor();
       break;
     case "ctrl+alt+u":
-      openUrlOfSelectedTweetUserInBackground();
+      openUrlOfSelectedTweetAuthorInBackground();
       break;
     case "shift+alt+u":
-      copyUrlOfSelectedTweetUser();
+      copyUrlOfSelectedTweetAuthor();
       break;
     case "alt+l":
       openUrlOfSelectedTweetLikes();
