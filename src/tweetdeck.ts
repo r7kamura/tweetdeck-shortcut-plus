@@ -80,6 +80,13 @@ export function removeSelectedColumn() {
   findSelectedColumnRemoveButton()?.click();
 }
 
+export function selectHashtagInSelectedTweet() {
+  const element = document.querySelector(
+    '.is-selected-tweet a[rel="hashtag"]'
+  ) as HTMLElement | null;
+  element?.click();
+}
+
 export function selectImageInSelectedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"

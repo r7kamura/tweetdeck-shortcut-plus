@@ -12,6 +12,7 @@ import {
   openUrlOfSelectedTweetUser,
   openUrlOfSelectedTweetUserInBackground,
   removeSelectedColumn,
+  selectHashtagInSelectedTweet,
   selectImageInSelectedTweet,
   selectQuoteInSelectedTweet,
 } from "./tweetdeck";
@@ -51,6 +52,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "ctrl+alt+l":
       openUrlOfSelectedTweetLikesInBackground();
+      break;
+    case "alt+h":
+      selectHashtagInSelectedTweet();
       break;
     case "alt+o":
       selectImageInSelectedTweet();

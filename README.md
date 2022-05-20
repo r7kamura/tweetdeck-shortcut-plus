@@ -50,6 +50,10 @@ Open URL of selected tweet likes.
 
 Open URL of selected tweet likes in the background tab.
 
+### <kbd>Alt+H</kbd>
+
+Select hashtag in selected tweet.
+
 ### <kbd>Alt+O</kbd>
 
 Select image in selected tweet.
