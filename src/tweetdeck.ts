@@ -33,6 +33,20 @@ export function openUrlOfSelectedTweetInBackground() {
   }
 }
 
+export function openUrlOfSelectedTweetUser() {
+  const url = getUrlOfSelectedTweetUser();
+  if (url) {
+    openForegroundTab(url);
+  }
+}
+
+export function openUrlOfSelectedTweetUserInBackground() {
+  const url = getUrlOfSelectedTweetUser();
+  if (url) {
+    openBackgroundTab(url);
+  }
+}
+
 function getUrlInSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
@@ -42,6 +56,12 @@ function getUrlInSelectedTweet() {
 function getUrlOfSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet a[rel='url']")
+    ?.getAttribute("href");
+}
+
+function getUrlOfSelectedTweetUser() {
+  return document
+    .querySelector(".is-selected-tweet a[rel='user']")
     ?.getAttribute("href");
 }
 

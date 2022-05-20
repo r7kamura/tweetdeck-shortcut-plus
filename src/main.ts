@@ -5,6 +5,8 @@ import {
   openUrlInSelectedTweetInBackground,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetInBackground,
+  openUrlOfSelectedTweetUser,
+  openUrlOfSelectedTweetUserInBackground,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -24,6 +26,12 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "ctrl+alt+t":
       openUrlOfSelectedTweetInBackground();
+      break;
+    case "alt+u":
+      openUrlOfSelectedTweetUser();
+      break;
+    case "ctrl+alt+u":
+      openUrlOfSelectedTweetUserInBackground();
       break;
   }
 }

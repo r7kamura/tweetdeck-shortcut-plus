@@ -22,6 +22,14 @@ Open URL of selected tweet.
 
 Open URL of selected tweet in the background tab.
 
+### <kbd>Alt+U</kbd>
+
+Open URL of selected tweet's user.
+
+### <kbd>Ctrl+Alt+U</kbd>
+
+Open URL of selected tweet's user in the background tab.
+
 ### <kbd>Alt+C</kbd>
 
 Copy URL of selected tweet.
