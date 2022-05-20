@@ -120,9 +120,7 @@ function addDisplayedUserColumn() {
 }
 
 function findSelectedItem() {
-  return document.querySelector(
-    ".is-selected-tweet"
-  ) as HTMLElement | null;
+  return document.querySelector(".is-selected-tweet") as HTMLElement | null;
 }
 
 function findModalAddColumnButton() {
@@ -159,7 +157,7 @@ function findSelectedColumnRemoveButton() {
 
 function findSelectedTweetAuthorLink() {
   return document.querySelector(
-    '.is-selected-tweet a[rel="user"]'
+    '.is-selected-tweet .js-tweet a[rel="user"]'
   ) as HTMLElement | null;
 }
 
