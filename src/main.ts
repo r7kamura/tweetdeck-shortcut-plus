@@ -16,6 +16,7 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "ctrl+c":
       copyUrlOfSelectedTweet();
+      break;
   }
 }
 
