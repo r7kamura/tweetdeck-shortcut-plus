@@ -1,14 +1,28 @@
 export function openUrlInSelectedTweet() {
-  const url = document
-    .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
-    ?.getAttribute("href");
-  if (!url) {
-    return;
+  const url = getUrlInSelectedTweet();
+  if (url) {
+    openForegroundTab(url);
   }
-  openUrlInBackgroundTab(url);
 }
 
-function openUrlInBackgroundTab(url: string) {
+export function openUrlInSelectedTweetInBackground() {
+  const url = getUrlInSelectedTweet();
+  if (url) {
+    openBackgroundTab(url);
+  }
+}
+
+function getUrlInSelectedTweet() {
+  return document
+    .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
+    ?.getAttribute("href");
+}
+
+function openForegroundTab(url: string) {
+  window?.open(url, "_blank")?.focus();
+}
+
+function openBackgroundTab(url: string) {
   var a = document.createElement("a");
   a.href = url;
   var event = document.createEvent("MouseEvents");
