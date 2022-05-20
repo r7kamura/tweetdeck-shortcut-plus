@@ -16,6 +16,7 @@ import {
   selectImageInSelectedTweet,
   selectQuoteInSelectedTweet,
   selectAuthorOfSelectedTweet,
+  addColumnOfSelectedTweetAuthor,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -65,6 +66,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+q":
       selectQuoteInSelectedTweet();
+      break;
+    case "alt+u":
+      addColumnOfSelectedTweetAuthor();
       break;
     case "alt+d":
       removeSelectedColumn();

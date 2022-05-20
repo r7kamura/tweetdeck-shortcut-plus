@@ -1,3 +1,12 @@
+export function addColumnOfSelectedTweetAuthor() {
+  findSelectedTweetAuthorLink()?.click();
+  findModalTweetsButton()?.click();
+  setTimeout(() => {
+    findModalAddColumnButton()?.click();
+    findModalDismissButton()?.click();
+  }, 0);
+}
+
 export function copyUrlInSelectedTweet() {
   const url = getUrlInSelectedTweet();
   if (url) {
@@ -81,10 +90,7 @@ export function removeSelectedColumn() {
 }
 
 export function selectAuthorOfSelectedTweet() {
-  const element = document.querySelector(
-    '.is-selected-tweet a[rel="user"]'
-  ) as HTMLElement | null;
-  element?.click();
+  findSelectedTweetAuthorLink()?.click();
 }
 
 export function selectHashtagInSelectedTweet() {
@@ -108,6 +114,24 @@ export function selectQuoteInSelectedTweet() {
   element?.click();
 }
 
+function findModalAddColumnButton() {
+  return document.querySelector(
+    ".js-modal-panel .js-add-column"
+  ) as HTMLElement | null;
+}
+
+function findModalDismissButton() {
+  return document.querySelector(
+    ".js-modal-panel .js-dismiss"
+  ) as HTMLElement | null;
+}
+
+function findModalTweetsButton() {
+  return document.querySelector(
+    '.js-modal-content .js-item-launch[data-type="tweets"]'
+  ) as HTMLElement | null;
+}
+
 function findSelectedColumnActionsToggleButton() {
   return document
     .querySelector(".is-selected-tweet")
@@ -120,6 +144,12 @@ function findSelectedColumnRemoveButton() {
     .querySelector(".is-selected-tweet")
     ?.closest(".js-column-holder")
     ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
+}
+
+function findSelectedTweetAuthorLink() {
+  return document.querySelector(
+    '.is-selected-tweet a[rel="user"]'
+  ) as HTMLElement | null;
 }
 
 function getUrlInSelectedTweet() {
