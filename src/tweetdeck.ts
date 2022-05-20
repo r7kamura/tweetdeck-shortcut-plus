@@ -11,8 +11,8 @@ export function openUrlInSelectedTweet() {
 function openUrlInBackgroundTab(url: string) {
   var a = document.createElement("a");
   a.href = url;
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent(
+  var event = document.createEvent("MouseEvents");
+  event.initMouseEvent(
     "click",
     true,
     true,
@@ -29,5 +29,5 @@ function openUrlInBackgroundTab(url: string) {
     0,
     null
   );
-  a.dispatchEvent(evt);
+  a.dispatchEvent(event);
 }
