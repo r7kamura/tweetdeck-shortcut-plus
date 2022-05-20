@@ -80,6 +80,13 @@ export function removeSelectedColumn() {
   findSelectedColumnRemoveButton()?.click();
 }
 
+export function selectAuthorOfSelectedTweet() {
+  const element = document.querySelector(
+    '.is-selected-tweet a[rel="user"]'
+  ) as HTMLElement | null;
+  element?.click();
+}
+
 export function selectHashtagInSelectedTweet() {
   const element = document.querySelector(
     '.is-selected-tweet a[rel="hashtag"]'

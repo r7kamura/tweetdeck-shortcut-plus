@@ -21,5 +21,6 @@ Browser extension to add more keyboard shortcuts on TweetDeck.
 |  <kbd>Ctrl+Alt+L</kbd> | Open URL of selected tweet likes in the background tab.  |
 |       <kbd>Alt+H</kbd> | Select hashtag in selected tweet.                        |
 |       <kbd>Alt+O</kbd> | Select image in selected tweet.                          |
+|       <kbd>Alt+P</kbd> | Select author of selected tweet.                         |
 |       <kbd>Alt+Q</kbd> | Select quoted tweet in selected tweet.                   |
 |       <kbd>Alt+D</kbd> | Remove column containing selected tweet.                 |

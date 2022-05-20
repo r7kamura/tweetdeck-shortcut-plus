@@ -15,6 +15,7 @@ import {
   selectHashtagInSelectedTweet,
   selectImageInSelectedTweet,
   selectQuoteInSelectedTweet,
+  selectAuthorOfSelectedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -58,6 +59,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+o":
       selectImageInSelectedTweet();
+      break;
+    case "alt+p":
+      selectAuthorOfSelectedTweet();
       break;
     case "alt+q":
       selectQuoteInSelectedTweet();
