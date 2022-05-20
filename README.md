@@ -6,15 +6,15 @@ Browser extension to add more keyboard shortcuts on TweetDeck.
 
 ## Keyboard shortcuts
 
-### <kbd>Alt+L</kbd>
+### <kbd>Alt+R</kbd>
 
 Open URL in selected tweet.
 
-### <kbd>Ctrl+Alt+L</kbd>
+### <kbd>Ctrl+Alt+R</kbd>
 
 Open URL in selected tweet in the background tab.
 
-### <kbd>Shift+Alt+L</kbd>
+### <kbd>Shift+Alt+R</kbd>
 
 Copy URL in selected tweet.
 
