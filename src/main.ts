@@ -66,7 +66,10 @@ function onKeydown(event: KeyboardEvent) {
       ) as any;
       removeButton?.click();
       break;
+    default:
+      return;
   }
+  event.preventDefault();
 }
 
 document.addEventListener("keydown", onKeydown);
