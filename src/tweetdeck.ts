@@ -79,9 +79,7 @@ export function showImageInSelectedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLAnchorElement | null;
-  if (element) {
-    element.click();
-  }
+  element?.click();
 }
 
 function getUrlInSelectedTweet() {
