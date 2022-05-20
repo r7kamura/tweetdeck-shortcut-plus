@@ -2,5 +2,11 @@
   "name": "TweetDeck Shortcut Plus",
   "description": "Add more keyboard shortcuts on TweetDeck.",
   "version": "0.0.1",
-  "manifest_version": 3
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://tweetdeck.twitter.com/*"],
+      "js": ["src/main.ts"]
+    }
+  ]
 }
