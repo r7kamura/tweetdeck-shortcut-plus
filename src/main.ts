@@ -38,13 +38,13 @@ function onKeydown(event: KeyboardEvent) {
     case "shift+alt+t":
       copyUrlOfSelectedTweet();
       break;
-    case "alt+u":
+    case "alt+a":
       openUrlOfSelectedTweetAuthor();
       break;
-    case "ctrl+alt+u":
+    case "ctrl+alt+a":
       openUrlOfSelectedTweetAuthorInBackground();
       break;
-    case "shift+alt+u":
+    case "shift+alt+a":
       copyUrlOfSelectedTweetAuthor();
       break;
     case "alt+l":
