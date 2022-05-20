@@ -16,7 +16,7 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+l":
       openUrlInSelectedTweetInBackground();
       break;
-    case "ctrl+c":
+    case "alt+c":
       copyUrlOfSelectedTweet();
       break;
     case "alt+t":
