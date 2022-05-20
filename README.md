@@ -53,3 +53,7 @@ Open URL of selected tweet likes in the background tab.
 ### <kbd>Alt+O</kbd>
 
 Show image in selected tweet.
+
+### <kbd>Alt+D</kbd>
+
+Remove column containing selected tweet.

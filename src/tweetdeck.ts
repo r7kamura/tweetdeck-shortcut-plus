@@ -75,11 +75,30 @@ export function openUrlOfSelectedTweetUserInBackground() {
   }
 }
 
+export function removeSelectedColumn() {
+  findSelectedColumnActionsToggleButton()?.click();
+  findSelectedColumnRemoveButton()?.click();
+}
+
 export function showImageInSelectedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLAnchorElement | null;
   element?.click();
+}
+
+function findSelectedColumnActionsToggleButton() {
+  return document
+    .querySelector(".is-selected-tweet")
+    ?.closest(".js-column-holder")
+    ?.querySelector(".js-action-header-button") as HTMLButtonElement | null;
+}
+
+function findSelectedColumnRemoveButton() {
+  return document
+    .querySelector(".is-selected-tweet")
+    ?.closest(".js-column-holder")
+    ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
 }
 
 function getUrlInSelectedTweet() {

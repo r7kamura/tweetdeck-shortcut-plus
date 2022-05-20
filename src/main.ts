@@ -53,6 +53,19 @@ function onKeydown(event: KeyboardEvent) {
     case "alt+o":
       showImageInSelectedTweet();
       break;
+    case "alt+d":
+      const holder = document
+        .querySelector(".is-selected-tweet")
+        ?.closest(".js-column-holder");
+      const toggleButton = holder?.querySelector(
+        ".js-action-header-button"
+      ) as any;
+      toggleButton?.click();
+      const removeButton = holder?.querySelector(
+        'button[data-action="remove"]'
+      ) as any;
+      removeButton?.click();
+      break;
   }
 }
 
