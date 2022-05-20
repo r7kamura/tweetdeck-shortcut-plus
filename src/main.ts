@@ -7,10 +7,10 @@ import {
 function onKeydown(event: KeyboardEvent) {
   const keyString = detectKeyString(event);
   switch (keyString) {
-    case "Alt+L":
+    case "alt+l":
       openUrlInSelectedTweet();
       break;
-    case "Ctrl+Alt+L":
+    case "ctrl+alt+l":
       openUrlInSelectedTweetInBackground();
       break;
   }

@@ -3,19 +3,19 @@ const ignoredKeys = new Set(["Alt", "Control", "Meta", "Shift"]);
 export function detectKeyString(event: KeyboardEvent): string {
   const segments = [];
   if (event.shiftKey) {
-    segments.push("Shift");
+    segments.push("shift");
   }
   if (event.ctrlKey) {
-    segments.push("Ctrl");
+    segments.push("ctrl");
   }
   if (event.altKey) {
-    segments.push("Alt");
+    segments.push("alt");
   }
   if (event.metaKey) {
-    segments.push("Meta");
+    segments.push("meta");
   }
   if (!ignoredKeys.has(event.key)) {
-    segments.push(event.key.toUpperCase());
+    segments.push(event.key);
   }
   return segments.join("+");
 }
