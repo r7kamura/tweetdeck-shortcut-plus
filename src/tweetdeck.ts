@@ -1,10 +1,6 @@
-export function addColumnOfSelectedTweetAuthor() {
+export function addSelectedTweetAuthorColumn() {
   findSelectedTweetAuthorLink()?.click();
-  findModalTweetsButton()?.click();
-  setTimeout(() => {
-    findModalAddColumnButton()?.click();
-    findModalDismissButton()?.click();
-  }, 0);
+  addDisplayedUserColumn();
 }
 
 export function copyUrlInSelectedTweet() {
@@ -114,6 +110,21 @@ export function selectQuoteInSelectedTweet() {
   element?.click();
 }
 
+function addDisplayedUserColumn() {
+  findModalTweetsButton()?.click();
+  setTimeout(() => {
+    findModalAddColumnButton()?.click();
+    findModalDismissButton()?.click();
+  }, 0);
+  focusSelectedItem();
+}
+
+function findSelectedItem() {
+  return document.querySelector(
+    ".is-selected-tweet"
+  ) as HTMLElement | null;
+}
+
 function findModalAddColumnButton() {
   return document.querySelector(
     ".js-modal-panel .js-add-column"
@@ -150,6 +161,10 @@ function findSelectedTweetAuthorLink() {
   return document.querySelector(
     '.is-selected-tweet a[rel="user"]'
   ) as HTMLElement | null;
+}
+
+function focusSelectedItem() {
+  findSelectedItem()?.focus();
 }
 
 function getUrlInSelectedTweet() {
