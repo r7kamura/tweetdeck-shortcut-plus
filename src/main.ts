@@ -1,4 +1,4 @@
-import { detectKeyString } from "./key";
+import { detectKeyString } from "./keyboard";
 import {
   copyUrlInSelectedTweet,
   copyUrlOfSelectedTweet,
