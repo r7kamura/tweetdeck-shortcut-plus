@@ -75,6 +75,15 @@ export function openUrlOfSelectedTweetUserInBackground() {
   }
 }
 
+export function showImageInSelectedTweet() {
+  const element = document.querySelector(
+    ".is-selected-tweet .js-media-image-link"
+  ) as HTMLAnchorElement | null;
+  if (element) {
+    element.click();
+  }
+}
+
 function getUrlInSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")

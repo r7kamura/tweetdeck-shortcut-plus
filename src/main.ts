@@ -11,6 +11,7 @@ import {
   openUrlOfSelectedTweetLikesInBackground,
   openUrlOfSelectedTweetUser,
   openUrlOfSelectedTweetUserInBackground,
+  showImageInSelectedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -48,6 +49,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "ctrl+alt+l":
       openUrlOfSelectedTweetLikesInBackground();
+      break;
+    case "alt+o":
+      showImageInSelectedTweet();
       break;
   }
 }

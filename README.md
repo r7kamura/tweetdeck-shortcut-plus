@@ -49,3 +49,7 @@ Open URL of selected tweet likes.
 ### <kbd>Ctrl+Alt+L</kbd>
 
 Open URL of selected tweet likes in the background tab.
+
+### <kbd>Alt+O</kbd>
+
+Show image in selected tweet.
