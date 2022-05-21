@@ -161,13 +161,13 @@ function findSelectedActivityOperatorLink() {
 function findSelectedColumnActionsToggleButton() {
   return findSelectedItem()
     ?.closest(".js-column-holder")
-    ?.querySelector(".js-action-header-button") as HTMLButtonElement | null;
+    ?.querySelector(".js-action-header-button") as HTMLElement | null;
 }
 
 function findSelectedColumnRemoveButton() {
   return findSelectedItem()
     ?.closest(".js-column-holder")
-    ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
+    ?.querySelector('button[data-action="remove"]') as HTMLElement | null;
 }
 
 function findSelectedItem() {
