@@ -15,9 +15,10 @@ import {
   selectHashtagInSelectedTweet,
   selectImageInSelectedTweet,
   selectQuoteInSelectedTweet,
-  selectAuthorOfSelectedTweet,
+  selectSelectedTweetAuthor,
   addSelectedTweetAuthorColumn,
-  addSelectedActivityUserColumn,
+  addSelectedActivityOperatorColumn,
+  selectSelectedActivityOperator,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -63,7 +64,10 @@ function onKeydown(event: KeyboardEvent) {
       selectImageInSelectedTweet();
       break;
     case "alt+p":
-      selectAuthorOfSelectedTweet();
+      selectSelectedTweetAuthor();
+      break;
+    case "alt+i":
+      selectSelectedActivityOperator();
       break;
     case "alt+q":
       selectQuoteInSelectedTweet();
@@ -72,7 +76,7 @@ function onKeydown(event: KeyboardEvent) {
       addSelectedTweetAuthorColumn();
       break;
     case "alt+y":
-      addSelectedActivityUserColumn();
+      addSelectedActivityOperatorColumn();
       break;
     case "alt+d":
       removeSelectedColumn();
