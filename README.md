@@ -24,7 +24,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 | <kbd>Alt+P</kbd> | Select selected tweet author.          |
 | <kbd>Alt+H</kbd> | Select selected tweet first hashtag.   |
 | <kbd>Alt+O</kbd> | Select selected tweet first image.     |
-| <kbd>Alt+Q</kbd> | Select selected tweet quoted tweet.    |
+| <kbd>Alt+K</kbd> | Select selected tweet quoted tweet.    |
 | <kbd>Alt+F</kbd> | Select selected tweet detail likes.    |
 | <kbd>Alt+R</kbd> | Select selected tweet detail retweets. |
 | <kbd>Alt+I</kbd> | Select selected activity operator.     |

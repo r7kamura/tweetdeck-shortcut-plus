@@ -65,7 +65,7 @@ function onKeydown(event: KeyboardEvent) {
     case "alt+r":
       selectSelectedTweetDetailRetweeters();
       break;
-    case "alt+q":
+    case "alt+k":
       selectSelectedTweetQuotedTweet();
       break;
     case "alt+u":
