@@ -4,7 +4,7 @@
 
 Browser extension to add more keyboard shortcuts to TweetDeck.
 
-## Open URL
+## Open
 
 |              Shortcut | Description                                          |
 | --------------------: | ---------------------------------------------------- |
