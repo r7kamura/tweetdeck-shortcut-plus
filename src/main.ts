@@ -2,6 +2,7 @@ import { detectKeyString } from "./keyboard";
 import {
   addSelectedActivityOperatorColumn,
   addSelectedTweetAuthorColumn,
+  deleteSelectedTweet,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
@@ -80,6 +81,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+q":
       quoteSelectedTweet();
+      break;
+    case "alt+delete":
+      deleteSelectedTweet();
       break;
     default:
       return;

@@ -10,6 +10,13 @@ export function addSelectedTweetAuthorColumn() {
   addDisplayedUserColumn();
 }
 
+export function deleteSelectedTweet() {
+  findSelectedTweetActionsMenuLink()?.click();
+  const link = findDropdownDeleteLink();
+  link?.dispatchEvent(createMouseOverEvent());
+  link?.click();
+}
+
 export function openUrlOfSelectedTweetFirstMedia() {
   const url =
     findSelectedTweetFirstImageOriginalUrl() ||
@@ -132,6 +139,18 @@ function convertRawImageUrlToOriginalImageUrl(url: string) {
   return `${url}?name=orig`;
 }
 
+function createMouseOverEvent() {
+  const event = document.createEvent("HTMLEvents");
+  event.initEvent("mouseover", true, false);
+  return event;
+}
+
+function findDropdownDeleteLink() {
+  return document.querySelector(
+    '.js-dropdown a[data-action="destroy"]'
+  ) as HTMLElement | null;
+}
+
 function findModalAddColumnButton() {
   return document.querySelector(
     ".js-modal-panel .js-add-column"
@@ -193,6 +212,12 @@ function findSelectedTweetDetailLikersLabel() {
 function findSelectedTweetDetailRetweetersLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="retweeters"]'
+  ) as HTMLElement | null;
+}
+
+function findSelectedTweetActionsMenuLink() {
+  return document.querySelector(
+    '.is-selected-tweet a[rel="actionsMenu"]'
   ) as HTMLElement | null;
 }
 
