@@ -3,10 +3,14 @@
   "description": "Add more keyboard shortcuts on TweetDeck.",
   "version": "0.0.1",
   "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.ts"
+  },
   "content_scripts": [
     {
       "matches": ["https://tweetdeck.twitter.com/*"],
       "js": ["src/main.ts"]
     }
-  ]
+  ],
+  "permissions": ["downloads"]
 }

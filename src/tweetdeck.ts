@@ -17,6 +17,13 @@ export function deleteSelectedTweet() {
   link?.click();
 }
 
+export function downloadSelectedTweetMedia() {
+  const urls = findSelectedTweetMediaUrls();
+  if (urls.length > 0) {
+    download(urls);
+  }
+}
+
 export function openUrlOfSelectedTweetFirstMedia() {
   const url =
     findSelectedTweetFirstImageOriginalUrl() ||
@@ -145,6 +152,10 @@ function createMouseOverEvent() {
   return event;
 }
 
+function download(urls: Array<string>) {
+  chrome.runtime.sendMessage({ urls });
+}
+
 function findDropdownDeleteLink() {
   return document.querySelector(
     '.js-dropdown a[data-action="destroy"]'
@@ -222,16 +233,7 @@ function findSelectedTweetActionsMenuLink() {
 }
 
 function findSelectedTweetFirstImageOriginalUrl() {
-  const style = document
-    .querySelector(".is-selected-tweet .js-media-image-link")
-    ?.getAttribute("style");
-  const url = style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups
-    ?.url;
-  if (url) {
-    return convertRawImageUrlToOriginalImageUrl(url);
-  } else {
-    return null;
-  }
+  return findSelectedTweetMediaUrls()[0];
 }
 
 function findSelectedTweetFirstLinkUrl() {
@@ -256,6 +258,31 @@ function findSelectedTweetGifVideoUrl() {
   return document
     .querySelector(".is-selected-tweet .js-media-gif")
     ?.getAttribute("src");
+}
+
+function findSelectedTweetMediaUrls() {
+  const videoUrl =
+    findSelectedTweetGifVideoUrl() || findSelectedTweetNativeVideoUrl();
+  if (videoUrl) {
+    return [videoUrl];
+  } else {
+    return findSelectedTweetImageUrls();
+  }
+}
+
+function findSelectedTweetImageUrls() {
+  const anchors = Array.from(
+    document.querySelectorAll(".is-selected-tweet .js-media-image-link")
+  );
+  return anchors.reduce((urls: Array<string>, anchor) => {
+    const style = anchor.getAttribute("style");
+    const url = style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups
+      ?.url;
+    if (url) {
+      urls.push(convertRawImageUrlToOriginalImageUrl(url));
+    }
+    return urls;
+  }, []);
 }
 
 function findSelectedTweetNativeVideoUrl() {
