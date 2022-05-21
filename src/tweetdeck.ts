@@ -1,132 +1,128 @@
 import { openUrlInBackground, openUrlInForeground } from "./tab";
 
-export function addSelectedActivityOperatorColumn() {
-  findSelectedActivityOperatorLink()?.click();
+export function addActivityOperatorColumn() {
+  findActivityOperatorLink()?.click();
   addDisplayedUserColumn();
 }
 
-export function addSelectedTweetAuthorColumn() {
-  findSelectedTweetAuthorLink()?.click();
+export function addAuthorColumn() {
+  findAuthorLink()?.click();
   addDisplayedUserColumn();
 }
 
-export function deleteSelectedTweet() {
-  findSelectedTweetActionsMenuLink()?.click();
+export function deleteTweet() {
+  findActionsMenuLink()?.click();
   const link = findDropdownDeleteLink();
   link?.dispatchEvent(createMouseOverEvent());
   link?.click();
 }
 
-export function downloadSelectedTweetMedia() {
-  const urls = findSelectedTweetMediaUrls();
+export function downloadMedia() {
+  const urls = findMediaUrls();
   if (urls.length > 0) {
     download(urls);
   }
 }
 
-export function openUrlOfSelectedTweetFirstMedia() {
+export function browseFirstMedia() {
   const url =
-    findSelectedTweetFirstImageOriginalUrl() ||
-    findSelectedTweetGifVideoUrl() ||
-    findSelectedTweetNativeVideoUrl();
+    findFirstImageOriginalUrl() || findGifVideoUrl() || findNativeVideoUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
-export function openUrlOfSelectedTweetFirstMediaInBackground() {
+export function browseFirstMediaInBackground() {
   const url =
-    findSelectedTweetFirstImageOriginalUrl() ||
-    findSelectedTweetGifVideoUrl() ||
-    findSelectedTweetNativeVideoUrl();
+    findFirstImageOriginalUrl() || findGifVideoUrl() || findNativeVideoUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
-export function openUrlOfSelectedTweetFirstLink() {
-  const url = findSelectedTweetFirstLinkUrl();
+export function browseFirstLink() {
+  const url = findFirstLinkUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
-export function openUrlOfSelectedTweetFirstLinkInBackground() {
-  const url = findSelectedTweetFirstLinkUrl();
+export function browseFirstLinkInBackground() {
+  const url = findFirstLinkUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
-export function openUrlOfSelectedTweet() {
-  const url = findSelectedTweetUrl();
+export function browse() {
+  const url = findUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
-export function openUrlOfSelectedTweetInBackground() {
-  const url = findSelectedTweetUrl();
+export function browseInBackground() {
+  const url = findUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
-export function openUrlOfSelectedTweetAuthor() {
-  const url = findSelectedTweetAuthorUrl();
+export function browseAuthor() {
+  const url = findAuthorUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
-export function openUrlOfSelectedTweetAuthorInBackground() {
-  const url = findSelectedTweetAuthorUrl();
+export function browseAuthorInBackground() {
+  const url = findAuthorUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
-export function quoteSelectedTweet() {
-  findSelectedTweetRetweetLink()?.click();
+export function quote() {
+  findRetweetLink()?.click();
   findModalQuoteButton()?.click();
 }
 
-export function removeSelectedItemColumn() {
-  findSelectedColumnActionsToggleButton()?.click();
-  findSelectedColumnRemoveButton()?.click();
+export function removeColumn() {
+  findColumnActionsToggleButton()?.click();
+  findColumnRemoveButton()?.click();
 }
 
-export function selectSelectedActivityOperator() {
-  findSelectedActivityOperatorLink()?.click();
+export function selectActivityOperator() {
+  findActivityOperatorLink()?.click();
 }
 
-export function selectSelectedTweetAuthor() {
-  findSelectedTweetAuthorLink()?.click();
+export function selectAuthor() {
+  findAuthorLink()?.click();
 }
 
-export function selectSelectedTweetDetailLikers() {
-  findSelectedTweetDetailLikersLabel()?.click();
+export function selectDetailLikers() {
+  findDetailLikersLabel()?.click();
 }
 
-export function selectSelectedTweetDetailRetweeters() {
-  findSelectedTweetDetailRetweetersLabel()?.click();
+export function selectDetailRetweeters() {
+  findDetailRetweetersLabel()?.click();
 }
 
-export function selectSelectedTweetFirstHashTag() {
+export function selectFirstHashTag() {
   const element = document.querySelector(
     '.is-selected-tweet a[rel="hashtag"]'
   ) as HTMLElement | null;
   element?.click();
 }
 
-export function selectSelectedTweetFirstImage() {
+export function selectFirstImage() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLElement | null;
   element?.click();
 }
 
-export function selectSelectedTweetQuotedTweet() {
+export function selectQuotedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-quote-detail"
   ) as HTMLElement | null;
@@ -139,7 +135,7 @@ function addDisplayedUserColumn() {
     findModalAddColumnButton()?.click();
     findModalDismissButton()?.click();
   }, 0);
-  focusSelectedItem();
+  focusItem();
 }
 
 function convertRawImageUrlToOriginalImageUrl(url: string) {
@@ -186,91 +182,90 @@ function findModalTweetsButton() {
   ) as HTMLElement | null;
 }
 
-function findSelectedActivityOperatorLink() {
+function findActivityOperatorLink() {
   return document.querySelector(
     '.is-selected-tweet .activity-header a[rel="user"]'
   ) as HTMLElement | null;
 }
 
-function findSelectedColumnActionsToggleButton() {
-  return findSelectedItem()
+function findColumnActionsToggleButton() {
+  return findItem()
     ?.closest(".js-column-holder")
     ?.querySelector(".js-action-header-button") as HTMLElement | null;
 }
 
-function findSelectedColumnRemoveButton() {
-  return findSelectedItem()
+function findColumnRemoveButton() {
+  return findItem()
     ?.closest(".js-column-holder")
     ?.querySelector('button[data-action="remove"]') as HTMLElement | null;
 }
 
-function findSelectedItem() {
+function findItem() {
   return document.querySelector(".is-selected-tweet") as HTMLElement | null;
 }
 
-function findSelectedTweetAuthorLink() {
+function findAuthorLink() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet a[rel="user"]'
   ) as HTMLElement | null;
 }
 
-function findSelectedTweetDetailLikersLabel() {
+function findDetailLikersLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="favoriters"]'
   ) as HTMLElement | null;
 }
 
-function findSelectedTweetDetailRetweetersLabel() {
+function findDetailRetweetersLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="retweeters"]'
   ) as HTMLElement | null;
 }
 
-function findSelectedTweetActionsMenuLink() {
+function findActionsMenuLink() {
   return document.querySelector(
     '.is-selected-tweet a[rel="actionsMenu"]'
   ) as HTMLElement | null;
 }
 
-function findSelectedTweetFirstImageOriginalUrl() {
-  return findSelectedTweetMediaUrls()[0];
+function findFirstImageOriginalUrl() {
+  return findMediaUrls()[0];
 }
 
-function findSelectedTweetFirstLinkUrl() {
+function findFirstLinkUrl() {
   return document
     .querySelector(".is-selected-tweet .js-tweet .url-ext")
     ?.getAttribute("data-full-url");
 }
 
-function findSelectedTweetUrl() {
+function findUrl() {
   return document
     .querySelector(".is-selected-tweet a[rel='url']")
     ?.getAttribute("href");
 }
 
-function findSelectedTweetAuthorUrl() {
+function findAuthorUrl() {
   return document
     .querySelector(".is-selected-tweet a[rel='user']")
     ?.getAttribute("href");
 }
 
-function findSelectedTweetGifVideoUrl() {
+function findGifVideoUrl() {
   return document
     .querySelector(".is-selected-tweet .js-media-gif")
     ?.getAttribute("src");
 }
 
-function findSelectedTweetMediaUrls() {
-  const videoUrl =
-    findSelectedTweetGifVideoUrl() || findSelectedTweetNativeVideoUrl();
+function findMediaUrls() {
+  const videoUrl = findGifVideoUrl() || findNativeVideoUrl();
   if (videoUrl) {
     return [videoUrl];
   } else {
-    return findSelectedTweetImageUrls();
+    return findImageUrls();
   }
 }
 
-function findSelectedTweetImageUrls() {
+function findImageUrls() {
   const anchors = Array.from(
     document.querySelectorAll(".is-selected-tweet .js-media-image-link")
   );
@@ -285,18 +280,18 @@ function findSelectedTweetImageUrls() {
   }, []);
 }
 
-function findSelectedTweetNativeVideoUrl() {
+function findNativeVideoUrl() {
   return document
     .querySelector(".is-selected-tweet .js-media-native-video")
     ?.getAttribute("src");
 }
 
-function findSelectedTweetRetweetLink() {
+function findRetweetLink() {
   return document.querySelector(
     '.is-selected-tweet a[rel="retweet"]'
   ) as HTMLElement | null;
 }
 
-function focusSelectedItem() {
-  findSelectedItem()?.focus();
+function focusItem() {
+  findItem()?.focus();
 }

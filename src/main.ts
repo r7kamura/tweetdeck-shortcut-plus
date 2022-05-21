@@ -1,93 +1,93 @@
 import { detectKeyString } from "./keyboard";
 import {
-  addSelectedActivityOperatorColumn,
-  addSelectedTweetAuthorColumn,
-  deleteSelectedTweet,
-  downloadSelectedTweetMedia,
-  openUrlOfSelectedTweet,
-  openUrlOfSelectedTweetAuthor,
-  openUrlOfSelectedTweetAuthorInBackground,
-  openUrlOfSelectedTweetFirstLink,
-  openUrlOfSelectedTweetFirstLinkInBackground,
-  openUrlOfSelectedTweetFirstMedia,
-  openUrlOfSelectedTweetFirstMediaInBackground,
-  openUrlOfSelectedTweetInBackground,
-  quoteSelectedTweet,
-  removeSelectedItemColumn,
-  selectSelectedActivityOperator,
-  selectSelectedTweetAuthor,
-  selectSelectedTweetDetailLikers,
-  selectSelectedTweetDetailRetweeters,
-  selectSelectedTweetFirstHashTag,
-  selectSelectedTweetFirstImage,
-  selectSelectedTweetQuotedTweet,
+  addActivityOperatorColumn,
+  addAuthorColumn,
+  browse,
+  browseAuthor,
+  browseAuthorInBackground,
+  browseFirstLink,
+  browseFirstLinkInBackground,
+  browseFirstMedia,
+  browseFirstMediaInBackground,
+  browseInBackground,
+  deleteTweet,
+  downloadMedia,
+  quote,
+  removeColumn,
+  selectActivityOperator,
+  selectAuthor,
+  selectDetailLikers,
+  selectDetailRetweeters,
+  selectFirstHashTag,
+  selectFirstImage,
+  selectQuotedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
   const keyString = detectKeyString(event);
   switch (keyString) {
     case "alt+l":
-      openUrlOfSelectedTweetFirstLink();
+      browseFirstLink();
       break;
     case "ctrl+alt+l":
-      openUrlOfSelectedTweetFirstLinkInBackground();
+      browseFirstLinkInBackground();
       break;
     case "alt+s":
-      openUrlOfSelectedTweetFirstMedia();
+      browseFirstMedia();
       break;
     case "ctrl+alt+s":
-      openUrlOfSelectedTweetFirstMediaInBackground();
+      browseFirstMediaInBackground();
       break;
     case "alt+t":
-      openUrlOfSelectedTweet();
+      browse();
       break;
     case "ctrl+alt+t":
-      openUrlOfSelectedTweetInBackground();
+      browseInBackground();
       break;
     case "alt+a":
-      openUrlOfSelectedTweetAuthor();
+      browseAuthor();
       break;
     case "ctrl+alt+a":
-      openUrlOfSelectedTweetAuthorInBackground();
+      browseAuthorInBackground();
       break;
     case "alt+h":
-      selectSelectedTweetFirstHashTag();
+      selectFirstHashTag();
       break;
     case "alt+o":
-      selectSelectedTweetFirstImage();
+      selectFirstImage();
       break;
     case "alt+p":
-      selectSelectedTweetAuthor();
+      selectAuthor();
       break;
     case "alt+i":
-      selectSelectedActivityOperator();
+      selectActivityOperator();
       break;
     case "alt+f":
-      selectSelectedTweetDetailLikers();
+      selectDetailLikers();
       break;
     case "alt+r":
-      selectSelectedTweetDetailRetweeters();
+      selectDetailRetweeters();
       break;
     case "alt+k":
-      selectSelectedTweetQuotedTweet();
+      selectQuotedTweet();
       break;
     case "alt+u":
-      addSelectedTweetAuthorColumn();
+      addAuthorColumn();
       break;
     case "alt+y":
-      addSelectedActivityOperatorColumn();
+      addActivityOperatorColumn();
       break;
     case "alt+d":
-      removeSelectedItemColumn();
+      removeColumn();
       break;
     case "alt+q":
-      quoteSelectedTweet();
+      quote();
       break;
     case "alt+j":
-      downloadSelectedTweetMedia();
+      downloadMedia();
       break;
     case "alt+delete":
-      deleteSelectedTweet();
+      deleteTweet();
       break;
     default:
       return;
