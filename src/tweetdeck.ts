@@ -10,15 +10,17 @@ export function addSelectedTweetAuthorColumn() {
   addDisplayedUserColumn();
 }
 
-export function openUrlOfSelectedTweetFirstImage() {
-  const url = findSelectedTweetFirstImageOriginalUrl();
+export function openUrlOfSelectedTweetFirstMedia() {
+  const url =
+    findSelectedTweetFirstImageOriginalUrl() || findSelectedTweetGifVideoUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
-export function openUrlOfSelectedTweetFirstImageInBackground() {
-  const url = findSelectedTweetFirstImageOriginalUrl();
+export function openUrlOfSelectedTweetFirstMediaInBackground() {
+  const url =
+    findSelectedTweetFirstImageOriginalUrl() || findSelectedTweetGifVideoUrl();
   if (url) {
     openUrlInBackground(url);
   }
@@ -208,6 +210,12 @@ function findSelectedTweetAuthorUrl() {
   return document
     .querySelector(".is-selected-tweet a[rel='user']")
     ?.getAttribute("href");
+}
+
+function findSelectedTweetGifVideoUrl() {
+  return document
+    .querySelector(".is-selected-tweet .js-media-gif")
+    ?.getAttribute("src");
 }
 
 function focusSelectedItem() {

@@ -16,8 +16,8 @@ import {
   selectSelectedTweetFirstHashTag,
   selectSelectedTweetFirstImage,
   selectSelectedTweetQuotedTweet,
-  openUrlOfSelectedTweetFirstImage,
-  openUrlOfSelectedTweetFirstImageInBackground,
+  openUrlOfSelectedTweetFirstMedia,
+  openUrlOfSelectedTweetFirstMediaInBackground,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -29,11 +29,11 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+l":
       openUrlOfSelectedTweetFirstLinkInBackground();
       break;
-    case "alt+s":
-      openUrlOfSelectedTweetFirstImage();
+    case "alt+m":
+      openUrlOfSelectedTweetFirstMedia();
       break;
-    case "ctrl+alt+s":
-      openUrlOfSelectedTweetFirstImageInBackground();
+    case "ctrl+alt+m":
+      openUrlOfSelectedTweetFirstMediaInBackground();
       break;
     case "alt+t":
       openUrlOfSelectedTweet();

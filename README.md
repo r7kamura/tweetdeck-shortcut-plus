@@ -14,8 +14,8 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 | <kbd>Ctrl+Alt+A</kbd> | Open URL of selected tweet author in background.      |
 |      <kbd>Alt+L</kbd> | Open URL of selected tweet first link.                |
 | <kbd>Ctrl+Alt+L</kbd> | Open URL of selected tweet first link in background.  |
-|      <kbd>Alt+S</kbd> | Open URL of selected tweet first image.               |
-| <kbd>Ctrl+Alt+S</kbd> | Open URL of selected tweet first image in background. |
+|      <kbd>Alt+M</kbd> | Open URL of selected tweet first media.               |
+| <kbd>Ctrl+Alt+M</kbd> | Open URL of selected tweet first media in background. |
 
 ## Select
 
