@@ -4,7 +4,9 @@
 
 Browser extension to add more keyboard shortcuts to TweetDeck.
 
-## Open URL
+## Keyboard shortcuts
+
+### Open URL
 
 |              Shortcut | Description                                          |
 | --------------------: | ---------------------------------------------------- |
@@ -15,7 +17,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 |      <kbd>Alt+L</kbd> | Open URL of selected tweet first link.               |
 | <kbd>Ctrl+Alt+L</kbd> | Open URL of selected tweet first link in background. |
 
-## Select
+### Select
 
 |         Shortcut | Description                            |
 | ---------------: | -------------------------------------- |
@@ -27,7 +29,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 | <kbd>Alt+R</kbd> | Select selected tweet detail retweets. |
 | <kbd>Alt+I</kbd> | Select selected activity operator.     |
 
-## Column
+### Column
 
 |         Shortcut | Description                             |
 | ---------------: | --------------------------------------- |
