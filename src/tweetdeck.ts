@@ -11,16 +11,16 @@ export function addSelectedTweetAuthorColumn() {
 }
 
 export function openUrlOfSelectedTweetFirstImage() {
-  const url = findSelectedTweetFirstImageUrl();
+  const url = findSelectedTweetFirstImageOriginalUrl();
   if (url) {
-    openUrlInForeground(convertRawImageUrlToOriginalImageUrl(url));
+    openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetFirstImageInBackground() {
-  const url = findSelectedTweetFirstImageUrl();
+  const url = findSelectedTweetFirstImageOriginalUrl();
   if (url) {
-    openUrlInBackground(convertRawImageUrlToOriginalImageUrl(url));
+    openUrlInBackground(url);
   }
 }
 
@@ -179,11 +179,17 @@ function findSelectedTweetDetailRetweetersLabel() {
   ) as HTMLElement | null;
 }
 
-function findSelectedTweetFirstImageUrl() {
+function findSelectedTweetFirstImageOriginalUrl() {
   const style = document
     .querySelector(".is-selected-tweet .js-media-image-link")
     ?.getAttribute("style");
-  return style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups?.url;
+  const url = style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups
+    ?.url;
+  if (url) {
+    return convertRawImageUrlToOriginalImageUrl(url);
+  } else {
+    return null;
+  }
 }
 
 function findSelectedTweetFirstLinkUrl() {
