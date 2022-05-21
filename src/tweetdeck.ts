@@ -1,3 +1,8 @@
+export function addSelectedActivityUserColumn() {
+  findSelectedActivityUserLink()?.click();
+  addDisplayedUserColumn();
+}
+
 export function addSelectedTweetAuthorColumn() {
   findSelectedTweetAuthorLink()?.click();
   addDisplayedUserColumn();
@@ -153,6 +158,12 @@ function findSelectedColumnRemoveButton() {
     .querySelector(".is-selected-tweet")
     ?.closest(".js-column-holder")
     ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
+}
+
+function findSelectedActivityUserLink() {
+  return document.querySelector(
+    '.is-selected-tweet .activity-header a[rel="user"]'
+  ) as HTMLElement | null;
 }
 
 function findSelectedTweetAuthorLink() {
