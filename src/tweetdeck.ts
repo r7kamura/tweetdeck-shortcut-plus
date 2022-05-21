@@ -1,3 +1,5 @@
+import { copy } from "./clipboard";
+
 export function addSelectedActivityOperatorColumn() {
   findSelectedActivityOperatorLink()?.click();
   addDisplayedUserColumn();
@@ -241,14 +243,4 @@ function openBackgroundTab(url: string) {
     null
   );
   a.dispatchEvent(event);
-}
-
-function copy(value: string) {
-  const listener = (event: any) => {
-    event.clipboardData.setData("text/plain", value);
-    event.preventDefault();
-  };
-  document.addEventListener("copy", listener);
-  document.execCommand("copy");
-  document.removeEventListener("copy", listener);
 }
