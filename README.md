@@ -22,5 +22,5 @@ Browser extension to add more keyboard shortcuts on TweetDeck.
 |      <kbd>Alt+R</kbd> | Select selected tweet detail retweets.          |
 |      <kbd>Alt+I</kbd> | Select selected activity operator.              |
 |      <kbd>Alt+U</kbd> | Add selected tweet author column.               |
-|      <kbd>Alt+U</kbd> | Add selected activity operator column.          |
+|      <kbd>Alt+Y</kbd> | Add selected activity operator column.          |
 |      <kbd>Alt+D</kbd> | Remove column containing selected item.         |
