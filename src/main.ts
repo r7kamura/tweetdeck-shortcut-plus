@@ -29,10 +29,10 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+l":
       openUrlOfSelectedTweetFirstLinkInBackground();
       break;
-    case "alt+m":
+    case "alt+s":
       openUrlOfSelectedTweetFirstMedia();
       break;
-    case "ctrl+alt+m":
+    case "ctrl+alt+s":
       openUrlOfSelectedTweetFirstMediaInBackground();
       break;
     case "alt+t":

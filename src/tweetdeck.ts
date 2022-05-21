@@ -12,7 +12,9 @@ export function addSelectedTweetAuthorColumn() {
 
 export function openUrlOfSelectedTweetFirstMedia() {
   const url =
-    findSelectedTweetFirstImageOriginalUrl() || findSelectedTweetGifVideoUrl();
+    findSelectedTweetFirstImageOriginalUrl() ||
+    findSelectedTweetGifVideoUrl() ||
+    findSelectedTweetNativeVideoUrl();
   if (url) {
     openUrlInForeground(url);
   }
@@ -20,7 +22,9 @@ export function openUrlOfSelectedTweetFirstMedia() {
 
 export function openUrlOfSelectedTweetFirstMediaInBackground() {
   const url =
-    findSelectedTweetFirstImageOriginalUrl() || findSelectedTweetGifVideoUrl();
+    findSelectedTweetFirstImageOriginalUrl() ||
+    findSelectedTweetGifVideoUrl() ||
+    findSelectedTweetNativeVideoUrl();
   if (url) {
     openUrlInBackground(url);
   }
@@ -215,6 +219,12 @@ function findSelectedTweetAuthorUrl() {
 function findSelectedTweetGifVideoUrl() {
   return document
     .querySelector(".is-selected-tweet .js-media-gif")
+    ?.getAttribute("src");
+}
+
+function findSelectedTweetNativeVideoUrl() {
+  return document
+    .querySelector(".is-selected-tweet .js-media-native-video")
     ?.getAttribute("src");
 }
 
