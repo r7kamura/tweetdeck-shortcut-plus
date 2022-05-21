@@ -60,20 +60,6 @@ export function openUrlOfSelectedTweetInBackground() {
   }
 }
 
-export function openUrlOfSelectedTweetLikes() {
-  const url = getUrlOfSelectedTweetLikes();
-  if (url) {
-    openForegroundTab(url);
-  }
-}
-
-export function openUrlOfSelectedTweetLikesInBackground() {
-  const url = getUrlOfSelectedTweetLikes();
-  if (url) {
-    openBackgroundTab(url);
-  }
-}
-
 export function openUrlOfSelectedTweetAuthor() {
   const url = getUrlOfSelectedTweetAuthor();
   if (url) {
@@ -99,6 +85,10 @@ export function selectSelectedActivityOperator() {
 
 export function selectSelectedTweetAuthor() {
   findSelectedTweetAuthorLink()?.click();
+}
+
+export function selectSelectedTweetDetailLikers() {
+  findSelectedTweetDetailLikersLabel()?.click();
 }
 
 export function selectSelectedTweetDetailRetweeters() {
@@ -181,6 +171,12 @@ function findSelectedTweetAuthorLink() {
   ) as HTMLElement | null;
 }
 
+function findSelectedTweetDetailLikersLabel() {
+  return document.querySelector(
+    '.is-selected-tweet .js-tweet-stat[data-type="favoriters"]'
+  ) as HTMLElement | null;
+}
+
 function findSelectedTweetDetailRetweetersLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="retweeters"]'
@@ -201,15 +197,6 @@ function getUrlOfSelectedTweet() {
   return document
     .querySelector(".is-selected-tweet a[rel='url']")
     ?.getAttribute("href");
-}
-
-function getUrlOfSelectedTweetLikes() {
-  const url = getUrlOfSelectedTweet();
-  if (url) {
-    return `${url}/likes`;
-  } else {
-    return null;
-  }
 }
 
 function getUrlOfSelectedTweetAuthor() {

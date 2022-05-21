@@ -7,8 +7,6 @@ import {
   openUrlInSelectedTweetInBackground,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetInBackground,
-  openUrlOfSelectedTweetLikes,
-  openUrlOfSelectedTweetLikesInBackground,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
   removeSelectedColumn,
@@ -20,6 +18,7 @@ import {
   addSelectedActivityOperatorColumn,
   selectSelectedActivityOperator,
   selectSelectedTweetDetailRetweeters,
+  selectSelectedTweetDetailLikers,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -52,12 +51,6 @@ function onKeydown(event: KeyboardEvent) {
     case "shift+alt+a":
       copyUrlOfSelectedTweetAuthor();
       break;
-    case "alt+f":
-      openUrlOfSelectedTweetLikes();
-      break;
-    case "ctrl+alt+f":
-      openUrlOfSelectedTweetLikesInBackground();
-      break;
     case "alt+h":
       selectHashtagInSelectedTweet();
       break;
@@ -69,6 +62,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+i":
       selectSelectedActivityOperator();
+      break;
+    case "alt+f":
+      selectSelectedTweetDetailLikers();
       break;
     case "alt+r":
       selectSelectedTweetDetailRetweeters();
