@@ -236,7 +236,7 @@ function findSelectedTweetFirstImageOriginalUrl() {
 
 function findSelectedTweetFirstLinkUrl() {
   return document
-    .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
+    .querySelector(".is-selected-tweet .js-tweet .url-ext")
     ?.getAttribute("data-full-url");
 }
 
