@@ -2,11 +2,13 @@ import { detectKeyString } from "./keyboard";
 import {
   addSelectedActivityOperatorColumn,
   addSelectedTweetAuthorColumn,
-  openUrlOfSelectedTweetFirstLink,
-  openUrlOfSelectedTweetFirstLinkInBackground,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
+  openUrlOfSelectedTweetFirstLink,
+  openUrlOfSelectedTweetFirstLinkInBackground,
+  openUrlOfSelectedTweetFirstMedia,
+  openUrlOfSelectedTweetFirstMediaInBackground,
   openUrlOfSelectedTweetInBackground,
   removeSelectedItemColumn,
   selectSelectedActivityOperator,
@@ -16,8 +18,6 @@ import {
   selectSelectedTweetFirstHashTag,
   selectSelectedTweetFirstImage,
   selectSelectedTweetQuotedTweet,
-  openUrlOfSelectedTweetFirstMedia,
-  openUrlOfSelectedTweetFirstMediaInBackground,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
