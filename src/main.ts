@@ -24,13 +24,13 @@ import {
 function onKeydown(event: KeyboardEvent) {
   const keyString = detectKeyString(event);
   switch (keyString) {
-    case "alt+r":
+    case "alt+l":
       openUrlInSelectedTweet();
       break;
-    case "ctrl+alt+r":
+    case "ctrl+alt+l":
       openUrlInSelectedTweetInBackground();
       break;
-    case "shift+alt+r":
+    case "shift+alt+l":
       copyUrlInSelectedTweet();
       break;
     case "alt+t":

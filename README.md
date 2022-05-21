@@ -8,9 +8,9 @@ Browser extension to add more keyboard shortcuts on TweetDeck.
 
 |               Shortcut | Description                                              |
 | ---------------------: | -------------------------------------------------------- |
-|       <kbd>Alt+R</kbd> | Open URL in selected tweet.                              |
-|  <kbd>Ctrl+Alt+R</kbd> | Open URL in selected tweet in the background tab.        |
-| <kbd>Shift+Alt+R</kbd> | Copy URL in selected tweet.                              |
+|       <kbd>Alt+L</kbd> | Open URL in selected tweet.                              |
+|  <kbd>Ctrl+Alt+L</kbd> | Open URL in selected tweet in the background tab.        |
+| <kbd>Shift+Alt+L</kbd> | Copy URL in selected tweet.                              |
 |       <kbd>Alt+T</kbd> | Open URL of selected tweet.                              |
 |  <kbd>Ctrl+Alt+T</kbd> | Open URL of selected tweet in the background tab.        |
 | <kbd>Shift+Alt+T</kbd> | Copy URL of selected tweet.                              |
