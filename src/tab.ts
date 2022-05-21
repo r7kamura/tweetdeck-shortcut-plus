@@ -1,8 +1,8 @@
-export function openForegroundTab(url: string) {
+export function openUrlInForeground(url: string) {
   window?.open(url, "_blank")?.focus();
 }
 
-export function openBackgroundTab(url: string) {
+export function openUrlInBackground(url: string) {
   var a = document.createElement("a");
   a.href = url;
   var event = document.createEvent("MouseEvents");

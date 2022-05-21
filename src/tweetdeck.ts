@@ -1,4 +1,4 @@
-import { openBackgroundTab, openForegroundTab } from "./tab";
+import { openUrlInBackground, openUrlInForeground } from "./tab";
 
 export function addSelectedActivityOperatorColumn() {
   findSelectedActivityOperatorLink()?.click();
@@ -10,45 +10,45 @@ export function addSelectedTweetAuthorColumn() {
   addDisplayedUserColumn();
 }
 
-export function openUrlInSelectedTweet() {
+export function openUrlOfSelectedTweetFirstLink() {
   const url = getUrlInSelectedTweet();
   if (url) {
-    openForegroundTab(url);
+    openUrlInForeground(url);
   }
 }
 
-export function openUrlInSelectedTweetInBackground() {
+export function openUrlOfSelectedTweetFirstLinkInBackground() {
   const url = getUrlInSelectedTweet();
   if (url) {
-    openBackgroundTab(url);
+    openUrlInBackground(url);
   }
 }
 
 export function openUrlOfSelectedTweet() {
   const url = getUrlOfSelectedTweet();
   if (url) {
-    openForegroundTab(url);
+    openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetInBackground() {
   const url = getUrlOfSelectedTweet();
   if (url) {
-    openBackgroundTab(url);
+    openUrlInBackground(url);
   }
 }
 
 export function openUrlOfSelectedTweetAuthor() {
   const url = getUrlOfSelectedTweetAuthor();
   if (url) {
-    openForegroundTab(url);
+    openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetAuthorInBackground() {
   const url = getUrlOfSelectedTweetAuthor();
   if (url) {
-    openBackgroundTab(url);
+    openUrlInBackground(url);
   }
 }
 
@@ -73,14 +73,14 @@ export function selectSelectedTweetDetailRetweeters() {
   findSelectedTweetDetailRetweetersLabel()?.click();
 }
 
-export function selectSelectedTweetHashTag() {
+export function selectSelectedTweetFirstHashTag() {
   const element = document.querySelector(
     '.is-selected-tweet a[rel="hashtag"]'
   ) as HTMLElement | null;
   element?.click();
 }
 
-export function selectSelectedTweetImage() {
+export function selectSelectedTweetFirstImage() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLElement | null;

@@ -2,8 +2,8 @@ import { detectKeyString } from "./keyboard";
 import {
   addSelectedActivityOperatorColumn,
   addSelectedTweetAuthorColumn,
-  openUrlInSelectedTweet,
-  openUrlInSelectedTweetInBackground,
+  openUrlOfSelectedTweetFirstLink,
+  openUrlOfSelectedTweetFirstLinkInBackground,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
@@ -13,8 +13,8 @@ import {
   selectSelectedTweetAuthor,
   selectSelectedTweetDetailLikers,
   selectSelectedTweetDetailRetweeters,
-  selectSelectedTweetHashTag,
-  selectSelectedTweetImage,
+  selectSelectedTweetFirstHashTag,
+  selectSelectedTweetFirstImage,
   selectSelectedTweetQuotedTweet,
 } from "./tweetdeck";
 
@@ -22,10 +22,10 @@ function onKeydown(event: KeyboardEvent) {
   const keyString = detectKeyString(event);
   switch (keyString) {
     case "alt+l":
-      openUrlInSelectedTweet();
+      openUrlOfSelectedTweetFirstLink();
       break;
     case "ctrl+alt+l":
-      openUrlInSelectedTweetInBackground();
+      openUrlOfSelectedTweetFirstLinkInBackground();
       break;
     case "alt+t":
       openUrlOfSelectedTweet();
@@ -40,10 +40,10 @@ function onKeydown(event: KeyboardEvent) {
       openUrlOfSelectedTweetAuthorInBackground();
       break;
     case "alt+h":
-      selectSelectedTweetHashTag();
+      selectSelectedTweetFirstHashTag();
       break;
     case "alt+o":
-      selectSelectedTweetImage();
+      selectSelectedTweetFirstImage();
       break;
     case "alt+p":
       selectSelectedTweetAuthor();
