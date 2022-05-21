@@ -3,6 +3,7 @@ import {
   addSelectedActivityOperatorColumn,
   addSelectedTweetAuthorColumn,
   deleteSelectedTweet,
+  downloadSelectedTweetMedia,
   openUrlOfSelectedTweet,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
@@ -81,6 +82,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+q":
       quoteSelectedTweet();
+      break;
+    case "alt+j":
+      downloadSelectedTweetMedia();
       break;
     case "alt+delete":
       deleteSelectedTweet();
