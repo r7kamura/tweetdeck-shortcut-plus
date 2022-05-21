@@ -10,43 +10,57 @@ export function addSelectedTweetAuthorColumn() {
   addDisplayedUserColumn();
 }
 
+export function openUrlOfSelectedTweetFirstImage() {
+  const url = findSelectedTweetFirstImageUrl();
+  if (url) {
+    openUrlInForeground(convertRawImageUrlToOriginalImageUrl(url));
+  }
+}
+
+export function openUrlOfSelectedTweetFirstImageInBackground() {
+  const url = findSelectedTweetFirstImageUrl();
+  if (url) {
+    openUrlInBackground(convertRawImageUrlToOriginalImageUrl(url));
+  }
+}
+
 export function openUrlOfSelectedTweetFirstLink() {
-  const url = getUrlInSelectedTweet();
+  const url = findSelectedTweetFirstLinkUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetFirstLinkInBackground() {
-  const url = getUrlInSelectedTweet();
+  const url = findSelectedTweetFirstLinkUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
 export function openUrlOfSelectedTweet() {
-  const url = getUrlOfSelectedTweet();
+  const url = findSelectedTweetUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetInBackground() {
-  const url = getUrlOfSelectedTweet();
+  const url = findSelectedTweetUrl();
   if (url) {
     openUrlInBackground(url);
   }
 }
 
 export function openUrlOfSelectedTweetAuthor() {
-  const url = getUrlOfSelectedTweetAuthor();
+  const url = findSelectedTweetAuthorUrl();
   if (url) {
     openUrlInForeground(url);
   }
 }
 
 export function openUrlOfSelectedTweetAuthorInBackground() {
-  const url = getUrlOfSelectedTweetAuthor();
+  const url = findSelectedTweetAuthorUrl();
   if (url) {
     openUrlInBackground(url);
   }
@@ -101,6 +115,10 @@ function addDisplayedUserColumn() {
     findModalDismissButton()?.click();
   }, 0);
   focusSelectedItem();
+}
+
+function convertRawImageUrlToOriginalImageUrl(url: string) {
+  return `${url}?name=orig`;
 }
 
 function findModalAddColumnButton() {
@@ -161,24 +179,31 @@ function findSelectedTweetDetailRetweetersLabel() {
   ) as HTMLElement | null;
 }
 
-function focusSelectedItem() {
-  findSelectedItem()?.focus();
+function findSelectedTweetFirstImageUrl() {
+  const style = document
+    .querySelector(".is-selected-tweet .js-media-image-link")
+    ?.getAttribute("style");
+  return style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups?.url;
 }
 
-function getUrlInSelectedTweet() {
+function findSelectedTweetFirstLinkUrl() {
   return document
     .querySelector(".is-selected-tweet .js-tweet-body .url-ext")
     ?.getAttribute("data-full-url");
 }
 
-function getUrlOfSelectedTweet() {
+function findSelectedTweetUrl() {
   return document
     .querySelector(".is-selected-tweet a[rel='url']")
     ?.getAttribute("href");
 }
 
-function getUrlOfSelectedTweetAuthor() {
+function findSelectedTweetAuthorUrl() {
   return document
     .querySelector(".is-selected-tweet a[rel='user']")
     ?.getAttribute("href");
+}
+
+function focusSelectedItem() {
+  findSelectedItem()?.focus();
 }
