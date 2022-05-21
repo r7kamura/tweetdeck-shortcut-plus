@@ -98,6 +98,10 @@ export function selectSelectedTweetAuthor() {
   findSelectedTweetAuthorLink()?.click();
 }
 
+export function selectSelectedTweetDetailRetweeters() {
+  findSelectedTweetDetailRetweetersLabel()?.click();
+}
+
 export function selectHashtagInSelectedTweet() {
   const element = document.querySelector(
     '.is-selected-tweet a[rel="hashtag"]'
@@ -128,10 +132,6 @@ function addDisplayedUserColumn() {
   focusSelectedItem();
 }
 
-function findSelectedItem() {
-  return document.querySelector(".is-selected-tweet") as HTMLElement | null;
-}
-
 function findModalAddColumnButton() {
   return document.querySelector(
     ".js-modal-panel .js-add-column"
@@ -150,29 +150,37 @@ function findModalTweetsButton() {
   ) as HTMLElement | null;
 }
 
-function findSelectedColumnActionsToggleButton() {
-  return document
-    .querySelector(".is-selected-tweet")
-    ?.closest(".js-column-holder")
-    ?.querySelector(".js-action-header-button") as HTMLButtonElement | null;
-}
-
-function findSelectedColumnRemoveButton() {
-  return document
-    .querySelector(".is-selected-tweet")
-    ?.closest(".js-column-holder")
-    ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
-}
-
 function findSelectedActivityOperatorLink() {
   return document.querySelector(
     '.is-selected-tweet .activity-header a[rel="user"]'
   ) as HTMLElement | null;
 }
 
+function findSelectedColumnActionsToggleButton() {
+  return findSelectedItem()
+    ?.closest(".js-column-holder")
+    ?.querySelector(".js-action-header-button") as HTMLButtonElement | null;
+}
+
+function findSelectedColumnRemoveButton() {
+  return findSelectedItem()
+    ?.closest(".js-column-holder")
+    ?.querySelector('button[data-action="remove"]') as HTMLButtonElement | null;
+}
+
+function findSelectedItem() {
+  return document.querySelector(".is-selected-tweet") as HTMLElement | null;
+}
+
 function findSelectedTweetAuthorLink() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet a[rel="user"]'
+  ) as HTMLElement | null;
+}
+
+function findSelectedTweetDetailRetweetersLabel() {
+  return document.querySelector(
+    '.is-selected-tweet .js-tweet-stat[data-type="retweeters"]'
   ) as HTMLElement | null;
 }
 

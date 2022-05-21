@@ -23,6 +23,7 @@ Browser extension to add more keyboard shortcuts on TweetDeck.
 |       <kbd>Alt+O</kbd> | Select image in selected tweet.                          |
 |       <kbd>Alt+P</kbd> | Select author of selected tweet.                         |
 |       <kbd>Alt+I</kbd> | Select selected activity operator.                       |
+|       <kbd>Alt+R</kbd> | Select selected tweet detail retweeters.                 |
 |       <kbd>Alt+Q</kbd> | Select quoted tweet in selected tweet.                   |
 |       <kbd>Alt+U</kbd> | Add selected tweet author column.                        |
 |       <kbd>Alt+U</kbd> | Add selected activity operator column.                   |

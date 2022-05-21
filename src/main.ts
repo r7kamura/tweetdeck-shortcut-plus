@@ -19,6 +19,7 @@ import {
   addSelectedTweetAuthorColumn,
   addSelectedActivityOperatorColumn,
   selectSelectedActivityOperator,
+  selectSelectedTweetDetailRetweeters,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -68,6 +69,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+i":
       selectSelectedActivityOperator();
+      break;
+    case "alt+r":
+      selectSelectedTweetDetailRetweeters();
       break;
     case "alt+q":
       selectQuoteInSelectedTweet();
