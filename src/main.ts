@@ -51,10 +51,10 @@ function onKeydown(event: KeyboardEvent) {
     case "shift+alt+a":
       copyUrlOfSelectedTweetAuthor();
       break;
-    case "alt+l":
+    case "alt+f":
       openUrlOfSelectedTweetLikes();
       break;
-    case "ctrl+alt+l":
+    case "ctrl+alt+f":
       openUrlOfSelectedTweetLikesInBackground();
       break;
     case "alt+h":
