@@ -72,6 +72,11 @@ export function openUrlOfSelectedTweetAuthorInBackground() {
   }
 }
 
+export function quoteSelectedTweet() {
+  findSelectedTweetRetweetLink()?.click();
+  findModalQuoteButton()?.click();
+}
+
 export function removeSelectedItemColumn() {
   findSelectedColumnActionsToggleButton()?.click();
   findSelectedColumnRemoveButton()?.click();
@@ -136,6 +141,12 @@ function findModalAddColumnButton() {
 function findModalDismissButton() {
   return document.querySelector(
     ".js-modal-panel .js-dismiss"
+  ) as HTMLElement | null;
+}
+
+function findModalQuoteButton() {
+  return document.querySelector(
+    '.js-modal button[data-action="quote"]'
   ) as HTMLElement | null;
 }
 
@@ -226,6 +237,12 @@ function findSelectedTweetNativeVideoUrl() {
   return document
     .querySelector(".is-selected-tweet .js-media-native-video")
     ?.getAttribute("src");
+}
+
+function findSelectedTweetRetweetLink() {
+  return document.querySelector(
+    '.is-selected-tweet a[rel="retweet"]'
+  ) as HTMLElement | null;
 }
 
 function focusSelectedItem() {

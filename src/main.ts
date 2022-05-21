@@ -10,6 +10,7 @@ import {
   openUrlOfSelectedTweetFirstMedia,
   openUrlOfSelectedTweetFirstMediaInBackground,
   openUrlOfSelectedTweetInBackground,
+  quoteSelectedTweet,
   removeSelectedItemColumn,
   selectSelectedActivityOperator,
   selectSelectedTweetAuthor,
@@ -76,6 +77,9 @@ function onKeydown(event: KeyboardEvent) {
       break;
     case "alt+d":
       removeSelectedItemColumn();
+      break;
+    case "alt+q":
+      quoteSelectedTweet();
       break;
     default:
       return;

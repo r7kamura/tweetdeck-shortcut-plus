@@ -36,3 +36,9 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 | <kbd>Alt+U</kbd> | Add selected tweet author column.       |
 | <kbd>Alt+Y</kbd> | Add selected activity operator column.  |
 | <kbd>Alt+D</kbd> | Remove column containing selected item. |
+
+## Tweet
+
+|         Shortcut | Description           |
+| ---------------: | --------------------- |
+| <kbd>Alt+Q</kbd> | Quote selected tweet. |
