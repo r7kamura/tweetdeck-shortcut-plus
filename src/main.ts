@@ -1,24 +1,21 @@
 import { detectKeyString } from "./keyboard";
 import {
-  copyUrlInSelectedTweet,
-  copyUrlOfSelectedTweet,
-  copyUrlOfSelectedTweetAuthor,
+  addSelectedActivityOperatorColumn,
+  addSelectedTweetAuthorColumn,
   openUrlInSelectedTweet,
   openUrlInSelectedTweetInBackground,
   openUrlOfSelectedTweet,
-  openUrlOfSelectedTweetInBackground,
   openUrlOfSelectedTweetAuthor,
   openUrlOfSelectedTweetAuthorInBackground,
-  removeSelectedColumn,
-  selectHashtagInSelectedTweet,
-  selectImageInSelectedTweet,
-  selectQuoteInSelectedTweet,
-  selectSelectedTweetAuthor,
-  addSelectedTweetAuthorColumn,
-  addSelectedActivityOperatorColumn,
+  openUrlOfSelectedTweetInBackground,
+  removeSelectedItemColumn,
   selectSelectedActivityOperator,
-  selectSelectedTweetDetailRetweeters,
+  selectSelectedTweetAuthor,
   selectSelectedTweetDetailLikers,
+  selectSelectedTweetDetailRetweeters,
+  selectSelectedTweetHashTag,
+  selectSelectedTweetImage,
+  selectSelectedTweetQuotedTweet,
 } from "./tweetdeck";
 
 function onKeydown(event: KeyboardEvent) {
@@ -30,17 +27,11 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+l":
       openUrlInSelectedTweetInBackground();
       break;
-    case "shift+alt+l":
-      copyUrlInSelectedTweet();
-      break;
     case "alt+t":
       openUrlOfSelectedTweet();
       break;
     case "ctrl+alt+t":
       openUrlOfSelectedTweetInBackground();
-      break;
-    case "shift+alt+t":
-      copyUrlOfSelectedTweet();
       break;
     case "alt+a":
       openUrlOfSelectedTweetAuthor();
@@ -48,14 +39,11 @@ function onKeydown(event: KeyboardEvent) {
     case "ctrl+alt+a":
       openUrlOfSelectedTweetAuthorInBackground();
       break;
-    case "shift+alt+a":
-      copyUrlOfSelectedTweetAuthor();
-      break;
     case "alt+h":
-      selectHashtagInSelectedTweet();
+      selectSelectedTweetHashTag();
       break;
     case "alt+o":
-      selectImageInSelectedTweet();
+      selectSelectedTweetImage();
       break;
     case "alt+p":
       selectSelectedTweetAuthor();
@@ -70,7 +58,7 @@ function onKeydown(event: KeyboardEvent) {
       selectSelectedTweetDetailRetweeters();
       break;
     case "alt+q":
-      selectQuoteInSelectedTweet();
+      selectSelectedTweetQuotedTweet();
       break;
     case "alt+u":
       addSelectedTweetAuthorColumn();
@@ -79,7 +67,7 @@ function onKeydown(event: KeyboardEvent) {
       addSelectedActivityOperatorColumn();
       break;
     case "alt+d":
-      removeSelectedColumn();
+      removeSelectedItemColumn();
       break;
     default:
       return;

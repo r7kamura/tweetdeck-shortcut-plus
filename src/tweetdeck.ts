@@ -1,4 +1,3 @@
-import { copy } from "./clipboard";
 import { openBackgroundTab, openForegroundTab } from "./tab";
 
 export function addSelectedActivityOperatorColumn() {
@@ -9,27 +8,6 @@ export function addSelectedActivityOperatorColumn() {
 export function addSelectedTweetAuthorColumn() {
   findSelectedTweetAuthorLink()?.click();
   addDisplayedUserColumn();
-}
-
-export function copyUrlInSelectedTweet() {
-  const url = getUrlInSelectedTweet();
-  if (url) {
-    copy(url);
-  }
-}
-
-export function copyUrlOfSelectedTweet() {
-  const url = getUrlOfSelectedTweet();
-  if (url) {
-    copy(url);
-  }
-}
-
-export function copyUrlOfSelectedTweetAuthor() {
-  const url = getUrlOfSelectedTweetAuthor();
-  if (url) {
-    copy(url);
-  }
 }
 
 export function openUrlInSelectedTweet() {
@@ -74,7 +52,7 @@ export function openUrlOfSelectedTweetAuthorInBackground() {
   }
 }
 
-export function removeSelectedColumn() {
+export function removeSelectedItemColumn() {
   findSelectedColumnActionsToggleButton()?.click();
   findSelectedColumnRemoveButton()?.click();
 }
@@ -95,21 +73,21 @@ export function selectSelectedTweetDetailRetweeters() {
   findSelectedTweetDetailRetweetersLabel()?.click();
 }
 
-export function selectHashtagInSelectedTweet() {
+export function selectSelectedTweetHashTag() {
   const element = document.querySelector(
     '.is-selected-tweet a[rel="hashtag"]'
   ) as HTMLElement | null;
   element?.click();
 }
 
-export function selectImageInSelectedTweet() {
+export function selectSelectedTweetImage() {
   const element = document.querySelector(
     ".is-selected-tweet .js-media-image-link"
   ) as HTMLElement | null;
   element?.click();
 }
 
-export function selectQuoteInSelectedTweet() {
+export function selectSelectedTweetQuotedTweet() {
   const element = document.querySelector(
     ".is-selected-tweet .js-quote-detail"
   ) as HTMLElement | null;
