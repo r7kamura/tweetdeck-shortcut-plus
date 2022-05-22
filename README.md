@@ -6,7 +6,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 
 ## Browse
 
-|              Shortcut | Description                       |
+|               Default | Action                            |
 | --------------------: | --------------------------------- |
 |      <kbd>Alt+T</kbd> | Browse tweet.                     |
 | <kbd>Ctrl+Alt+T</kbd> | Browse in background.             |
@@ -19,7 +19,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 
 ## Select
 
-|         Shortcut | Description           |
+|          Default | Action                |
 | ---------------: | --------------------- |
 | <kbd>Alt+P</kbd> | Select author.        |
 | <kbd>Alt+H</kbd> | Select first hashtag. |
@@ -31,7 +31,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 
 ## Column
 
-|         Shortcut | Description               |
+|          Default | Action                    |
 | ---------------: | ------------------------- |
 | <kbd>Alt+U</kbd> | Add author column.        |
 | <kbd>Alt+Y</kbd> | Add activity user column. |
