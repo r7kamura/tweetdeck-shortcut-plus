@@ -1,9 +1,9 @@
-import { actions } from "../action";
+import { actions, type Action } from "../action";
 
 const actionByName = actions.reduce((result, action) => {
   result[action.name] = action;
   return result;
-}, {} as any);
+}, {} as { [key: string]: Action });
 
 export default function App() {
   return (
