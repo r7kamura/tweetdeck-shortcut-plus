@@ -1,6 +1,6 @@
 const ignoredKeys = new Set(["Alt", "Control", "Meta", "Shift"]);
 
-export function detectKeyString(event: KeyboardEvent): string {
+export function detectKeyString(event: KeyboardEvent) {
   const segments = [];
   if (event.shiftKey) {
     segments.push("shift");
@@ -14,8 +14,10 @@ export function detectKeyString(event: KeyboardEvent): string {
   if (event.metaKey) {
     segments.push("meta");
   }
-  if (!ignoredKeys.has(event.key)) {
+  if (ignoredKeys.has(event.key)) {
+    return null;
+  } else {
     segments.push(event.key.toLocaleLowerCase());
+    return segments.join("+");
   }
-  return segments.join("+");
 }
