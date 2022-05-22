@@ -3,3 +3,7 @@ chrome.runtime.onMessage.addListener((request) => {
     chrome.downloads.download({ url });
   });
 });
+
+chrome.action.onClicked.addListener(() => {
+  chrome.runtime.openOptionsPage();
+});
