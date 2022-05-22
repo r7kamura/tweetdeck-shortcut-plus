@@ -17,7 +17,7 @@ const actions: Array<Action> = [
   },
   {
     default: "Alt+T",
-    description: "Browse",
+    description: "Browse tweet",
     name: "browse",
   },
   {
@@ -57,7 +57,7 @@ const actions: Array<Action> = [
   },
   {
     default: "Alt+Delete",
-    description: "Delete",
+    description: "Delete tweet",
     name: "deleteTweet",
   },
   {
@@ -67,7 +67,7 @@ const actions: Array<Action> = [
   },
   {
     default: "Alt+Q",
-    description: "Quote",
+    description: "Quote tweet",
     name: "quote",
   },
   {
