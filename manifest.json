@@ -26,5 +26,6 @@
       "js": ["src/main.ts"]
     }
   ],
+  "options_page": "options.html",
   "permissions": ["downloads"]
 }
