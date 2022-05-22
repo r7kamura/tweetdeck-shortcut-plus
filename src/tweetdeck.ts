@@ -11,7 +11,7 @@ export function addAuthorColumn() {
 }
 
 export function deleteTweet() {
-  findActionsMenuLink()?.click();
+  findCommandsMenuLink()?.click();
   const link = findDropdownDeleteLink();
   link?.dispatchEvent(createMouseOverEvent());
   link?.click();
@@ -88,7 +88,7 @@ export function quote() {
 }
 
 export function removeColumn() {
-  findColumnActionsToggleButton()?.click();
+  findColumnCommandsToggleButton()?.click();
   findColumnRemoveButton()?.click();
 }
 
@@ -149,12 +149,12 @@ function createMouseOverEvent() {
 }
 
 function download(urls: Array<string>) {
-  chrome.runtime.sendMessage({ urls });
+  chrome.runtime.sendMessage({ type: "download", payload: { urls } });
 }
 
 function findDropdownDeleteLink() {
   return document.querySelector(
-    '.js-dropdown a[data-action="destroy"]'
+    '.js-dropdown a[data-command="destroy"]'
   ) as HTMLElement | null;
 }
 
@@ -172,7 +172,7 @@ function findModalDismissButton() {
 
 function findModalQuoteButton() {
   return document.querySelector(
-    '.js-modal button[data-action="quote"]'
+    '.js-modal button[data-command="quote"]'
   ) as HTMLElement | null;
 }
 
@@ -188,16 +188,16 @@ function findActivityUserLink() {
   ) as HTMLElement | null;
 }
 
-function findColumnActionsToggleButton() {
+function findColumnCommandsToggleButton() {
   return findItem()
     ?.closest(".js-column-holder")
-    ?.querySelector(".js-action-header-button") as HTMLElement | null;
+    ?.querySelector(".js-command-header-button") as HTMLElement | null;
 }
 
 function findColumnRemoveButton() {
   return findItem()
     ?.closest(".js-column-holder")
-    ?.querySelector('button[data-action="remove"]') as HTMLElement | null;
+    ?.querySelector('button[data-command="remove"]') as HTMLElement | null;
 }
 
 function findItem() {
@@ -222,9 +222,9 @@ function findDetailRetweetsLabel() {
   ) as HTMLElement | null;
 }
 
-function findActionsMenuLink() {
+function findCommandsMenuLink() {
   return document.querySelector(
-    '.is-selected-tweet a[rel="actionsMenu"]'
+    '.is-selected-tweet a[rel="commandsMenu"]'
   ) as HTMLElement | null;
 }
 

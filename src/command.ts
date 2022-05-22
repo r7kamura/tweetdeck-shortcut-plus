@@ -1,10 +1,10 @@
-export type Action = {
+export type Command = {
   default: string;
   description: string;
   name: string;
 };
 
-const actions: Array<Action> = [
+const commands: Array<Command> = [
   {
     default: "alt+y",
     description: "Add activity user column",
@@ -112,4 +112,4 @@ const actions: Array<Action> = [
   },
 ];
 
-export { actions };
+export { commands };
