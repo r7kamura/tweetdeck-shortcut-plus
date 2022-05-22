@@ -26,67 +26,67 @@ import {
 function onKeydown(event: KeyboardEvent) {
   const keyString = detectKeyString(event);
   switch (keyString) {
-    case "alt+l":
+    case "Alt+l":
       browseFirstLink();
       break;
-    case "ctrl+alt+l":
+    case "Ctrl+Alt+l":
       browseFirstLinkInBackground();
       break;
-    case "alt+s":
+    case "Alt+s":
       browseFirstMedia();
       break;
-    case "ctrl+alt+s":
+    case "Ctrl+Alt+s":
       browseFirstMediaInBackground();
       break;
-    case "alt+t":
+    case "Alt+t":
       browse();
       break;
-    case "ctrl+alt+t":
+    case "Ctrl+Alt+t":
       browseInBackground();
       break;
-    case "alt+a":
+    case "Alt+a":
       browseAuthor();
       break;
-    case "ctrl+alt+a":
+    case "Ctrl+Alt+a":
       browseAuthorInBackground();
       break;
-    case "alt+h":
+    case "Alt+h":
       selectFirstHashTag();
       break;
-    case "alt+o":
+    case "Alt+o":
       selectFirstImage();
       break;
-    case "alt+p":
+    case "Alt+p":
       selectAuthor();
       break;
-    case "alt+i":
+    case "Alt+i":
       selectActivityUser();
       break;
-    case "alt+f":
+    case "Alt+f":
       selectLikes();
       break;
-    case "alt+r":
+    case "Alt+r":
       selectRetweets();
       break;
-    case "alt+k":
+    case "Alt+k":
       selectQuotedTweet();
       break;
-    case "alt+u":
+    case "Alt+u":
       addAuthorColumn();
       break;
-    case "alt+y":
+    case "Alt+y":
       addActivityUserColumn();
       break;
-    case "alt+d":
+    case "Alt+d":
       removeColumn();
       break;
-    case "alt+q":
+    case "Alt+q":
       quote();
       break;
-    case "alt+j":
+    case "Alt+j":
       downloadMedia();
       break;
-    case "alt+delete":
+    case "Alt+Delete":
       deleteTweet();
       break;
     default:
