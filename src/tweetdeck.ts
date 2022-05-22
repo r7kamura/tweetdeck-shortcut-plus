@@ -100,12 +100,12 @@ export function selectAuthor() {
   findAuthorLink()?.click();
 }
 
-export function selectDetailLikers() {
-  findDetailLikersLabel()?.click();
+export function selectLikes() {
+  findDetailLikesLabel()?.click();
 }
 
-export function selectDetailRetweeters() {
-  findDetailRetweetersLabel()?.click();
+export function selectRetweets() {
+  findDetailRetweetsLabel()?.click();
 }
 
 export function selectFirstHashTag() {
@@ -210,13 +210,13 @@ function findAuthorLink() {
   ) as HTMLElement | null;
 }
 
-function findDetailLikersLabel() {
+function findDetailLikesLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="favoriters"]'
   ) as HTMLElement | null;
 }
 
-function findDetailRetweetersLabel() {
+function findDetailRetweetsLabel() {
   return document.querySelector(
     '.is-selected-tweet .js-tweet-stat[data-type="retweeters"]'
   ) as HTMLElement | null;

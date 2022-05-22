@@ -29,8 +29,8 @@ export default function App() {
           actionNames={[
             "selectActivityUser",
             "selectAuthor",
-            "selectDetailLikers",
-            "selectDetailRetweeters",
+            "selectLikes",
+            "selectRetweets",
             "selectFirstHashTag",
             "selectFirstImage",
             "selectQuotedTweet",

@@ -27,5 +27,5 @@
     }
   ],
   "options_page": "options.html",
-  "permissions": ["downloads"]
+  "permissions": ["downloads", "storage"]
 }

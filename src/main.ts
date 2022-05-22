@@ -16,8 +16,8 @@ import {
   removeColumn,
   selectActivityUser,
   selectAuthor,
-  selectDetailLikers,
-  selectDetailRetweeters,
+  selectLikes,
+  selectRetweets,
   selectFirstHashTag,
   selectFirstImage,
   selectQuotedTweet,
@@ -63,10 +63,10 @@ function onKeydown(event: KeyboardEvent) {
       selectActivityUser();
       break;
     case "alt+f":
-      selectDetailLikers();
+      selectLikes();
       break;
     case "alt+r":
-      selectDetailRetweeters();
+      selectRetweets();
       break;
     case "alt+k":
       selectQuotedTweet();
