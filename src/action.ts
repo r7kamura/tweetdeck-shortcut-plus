@@ -87,12 +87,12 @@ const actions: Array<Action> = [
   },
   {
     default: "Alt+F",
-    description: "Select likers",
+    description: "Select likes",
     name: "selectDetailLikers",
   },
   {
     default: "Alt+R",
-    description: "Select retweeters",
+    description: "Select retweets",
     name: "selectDetailRetweeters",
   },
   {
