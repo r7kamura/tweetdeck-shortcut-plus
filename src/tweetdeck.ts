@@ -1,7 +1,7 @@
 import { openUrlInBackground, openUrlInForeground } from "./tab";
 
-export function addActivityOperatorColumn() {
-  findActivityOperatorLink()?.click();
+export function addActivityUserColumn() {
+  findActivityUserLink()?.click();
   addDisplayedUserColumn();
 }
 
@@ -92,8 +92,8 @@ export function removeColumn() {
   findColumnRemoveButton()?.click();
 }
 
-export function selectActivityOperator() {
-  findActivityOperatorLink()?.click();
+export function selectActivityUser() {
+  findActivityUserLink()?.click();
 }
 
 export function selectAuthor() {
@@ -182,7 +182,7 @@ function findModalTweetsButton() {
   ) as HTMLElement | null;
 }
 
-function findActivityOperatorLink() {
+function findActivityUserLink() {
   return document.querySelector(
     '.is-selected-tweet .activity-header a[rel="user"]'
   ) as HTMLElement | null;

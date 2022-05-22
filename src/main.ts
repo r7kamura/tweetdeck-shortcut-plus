@@ -1,6 +1,6 @@
 import { detectKeyString } from "./keyboard";
 import {
-  addActivityOperatorColumn,
+  addActivityUserColumn,
   addAuthorColumn,
   browse,
   browseAuthor,
@@ -14,7 +14,7 @@ import {
   downloadMedia,
   quote,
   removeColumn,
-  selectActivityOperator,
+  selectActivityUser,
   selectAuthor,
   selectDetailLikers,
   selectDetailRetweeters,
@@ -60,7 +60,7 @@ function onKeydown(event: KeyboardEvent) {
       selectAuthor();
       break;
     case "alt+i":
-      selectActivityOperator();
+      selectActivityUser();
       break;
     case "alt+f":
       selectDetailLikers();
@@ -75,7 +75,7 @@ function onKeydown(event: KeyboardEvent) {
       addAuthorColumn();
       break;
     case "alt+y":
-      addActivityOperatorColumn();
+      addActivityUserColumn();
       break;
     case "alt+d":
       removeColumn();
