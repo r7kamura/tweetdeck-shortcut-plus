@@ -136,9 +136,27 @@ function addDisplayedUserColumn() {
   focusItem();
 }
 
+// https://pbs.twimg.com/media/x.jpg?format=jpg&name=360x360 to
+// https://pbs.twimg.com/media/x.jpg?name=orig
+//
+// https://pbs.twimg.com/media/x?format=jpg&name=small to
+// https://pbs.twimg.com/media/x.jpg?name=orig
+//
+// https://pbs.twimg.com/media/x.png?format=jpg&name=240x240 to
+// https://pbs.twimg.com/media/x.png?name=orig to
+//
+// https://pbs.twimg.com/media/x?format=png&name=small to
+// https://pbs.twimg.com/media/x.png?name=orig to
 function convertRawImageUrlToOriginalImageUrl(url: string) {
   const urlObject = new URL(url);
   const searchParams = new URLSearchParams(urlObject.search);
+  if (
+    urlObject.pathname.split(".", 2).length == 1 &&
+    searchParams.get("format")
+  ) {
+    urlObject.pathname += `.${searchParams.get("format")}`;
+  }
+  searchParams.delete("format");
   searchParams.set("name", "orig");
   urlObject.search = searchParams.toString();
   return urlObject.toString();
@@ -269,18 +287,37 @@ function findMediaUrls() {
   }
 }
 
-function findImageUrls() {
+function findSummaryImageUrls() {
   const anchors = Array.from(
-    document.querySelectorAll(".is-selected-tweet .js-media-image-link")
+    document.querySelectorAll(".is-selected-tweet .js-media-image-link[style]")
   );
   return anchors.reduce((urls: Array<string>, anchor) => {
     const style = anchor.getAttribute("style");
     const url = style?.match(/background-image:url\((?<url>.+)\)/)?.groups?.url;
     if (url) {
-      urls.push(convertRawImageUrlToOriginalImageUrl(url));
+      urls.push(url);
     }
     return urls;
   }, []);
+}
+
+function findDetailImageUrls() {
+  const images = Array.from(
+    document.querySelectorAll(".is-selected-tweet .media-img")
+  );
+  return images.reduce((urls: Array<string>, image) => {
+    const url = image.getAttribute("src");
+    if (url) {
+      urls.push(url);
+    }
+    return urls;
+  }, []);
+}
+
+function findImageUrls() {
+  return [...findDetailImageUrls(), ...findSummaryImageUrls()].map(
+    convertRawImageUrlToOriginalImageUrl
+  );
 }
 
 function findNativeVideoUrl() {

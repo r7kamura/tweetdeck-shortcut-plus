@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Fix image URL detection bug.
+
 ## 0.2.1 - 2022-05-23
 
 ### Fixed
