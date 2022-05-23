@@ -9,8 +9,8 @@ convert \
   -gravity center \
   -font Helvetica \
   -pointsize "$((width / 4 * 3))" \
-  -background "#429DEB" \
+  -background "#1A466F" \
   -fill "#FFFFFF" \
   -size "${width}x${height}" \
-  label:t \
+  "label:+" \
   "images/icon${width}.png"
