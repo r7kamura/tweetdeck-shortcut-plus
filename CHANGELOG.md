@@ -5,6 +5,7 @@
 ### Fixed
 
 - Fix image URL detection bug.
+- Fix author URL detection bug on retweet and quote.
 
 ## 0.2.1 - 2022-05-23
 

@@ -268,7 +268,7 @@ function findUrl() {
 
 function findAuthorUrl() {
   return document
-    .querySelector(".is-selected-tweet a[rel='user']")
+    .querySelector(".is-selected-tweet .js-tweet .account-link")
     ?.getAttribute("href");
 }
 
