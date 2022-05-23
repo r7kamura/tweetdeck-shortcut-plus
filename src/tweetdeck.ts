@@ -154,7 +154,7 @@ function download(urls: Array<string>) {
 
 function findDropdownDeleteLink() {
   return document.querySelector(
-    '.js-dropdown a[data-command="destroy"]'
+    '.js-dropdown a[data-action="destroy"]'
   ) as HTMLElement | null;
 }
 
@@ -172,7 +172,7 @@ function findModalDismissButton() {
 
 function findModalQuoteButton() {
   return document.querySelector(
-    '.js-modal button[data-command="quote"]'
+    '.js-modal button[data-action="quote"]'
   ) as HTMLElement | null;
 }
 
@@ -191,13 +191,13 @@ function findActivityUserLink() {
 function findColumnCommandsToggleButton() {
   return findItem()
     ?.closest(".js-column-holder")
-    ?.querySelector(".js-command-header-button") as HTMLElement | null;
+    ?.querySelector(".js-action-header-button") as HTMLElement | null;
 }
 
 function findColumnRemoveButton() {
   return findItem()
     ?.closest(".js-column-holder")
-    ?.querySelector('button[data-command="remove"]') as HTMLElement | null;
+    ?.querySelector('button[data-action="remove"]') as HTMLElement | null;
 }
 
 function findItem() {
