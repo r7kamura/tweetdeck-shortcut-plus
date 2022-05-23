@@ -7,6 +7,11 @@ chrome.runtime.sendMessage(
   ({ keybindings }) => {
     const keyMap = generateKeyMap(keybindings);
     document.addEventListener("keydown", (event) => {
+      const tagName = document.activeElement?.tagName;
+      if (tagName == "INPUT" || tagName == "TEXTAREA") {
+        return;
+      }
+
       const key = detectKeyString(event)!;
       const commandNames = keyMap[key] || [];
       runCommands(commandNames);
