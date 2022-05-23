@@ -4,8 +4,7 @@
 
 ### Changed
 
-- Change browse tweet default shortcut: `t` to `b`.
-- Change browse tweet default shortcut: `alt+t` to `alt+b`.
+- Change some default keyboard shortcuts.
 
 ### Fixed
 

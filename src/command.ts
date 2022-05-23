@@ -31,7 +31,7 @@ const commands: Array<Command> = [
     name: "browseLinks",
   },
   {
-    default: "ctrl+alt+l",
+    default: "u",
     description: "Browse links in background",
     name: "browseLinksInBackground",
   },
@@ -41,7 +41,7 @@ const commands: Array<Command> = [
     name: "browseMedia",
   },
   {
-    default: "m",
+    default: "i",
     description: "Browse media in background",
     name: "browseMediaInBackground",
   },
@@ -61,7 +61,7 @@ const commands: Array<Command> = [
     name: "deleteTweet",
   },
   {
-    default: "i",
+    default: "w",
     description: "Download media",
     name: "downloadMedia",
   },

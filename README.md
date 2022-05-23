@@ -13,9 +13,9 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 - Browse author (default: <kbd>alt+a</kbd>)
 - Browse author in background (default: <kbd>ctrl+alt+a</kbd>)
 - Browse links (default: <kbd>alt+l</kbd>)
-- Browse links in background (default: <kbd>i</kbd>)
+- Browse links in background (default: <kbd>u</kbd>)
 - Browse media (default: <kbd>alt+s</kbd>)
-- Browse media in background (default: <kbd>m</kbd>)
+- Browse media in background (default: <kbd>i</kbd>)
 
 ### Select
 
@@ -35,7 +35,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 
 ### Others
 
-- Download media (default: <kbd>i</kbd>)
+- Download media (default: <kbd>w</kbd>)
 - Quote tweet (default: <kbd>q</kbd>)
 - Delete tweet (default: <kbd>alt+delete</kbd>)
 
