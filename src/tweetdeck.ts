@@ -24,20 +24,18 @@ export function downloadMedia() {
   }
 }
 
-export function browseFirstMedia() {
-  const url =
-    findFirstImageOriginalUrl() || findGifVideoUrl() || findNativeVideoUrl();
-  if (url) {
-    openUrlInForeground(url);
-  }
+export function browseMedia() {
+  findMediaUrls()
+    .reverse()
+    .forEach((url) => {
+      openUrlInForeground(url);
+    });
 }
 
-export function browseFirstMediaInBackground() {
-  const url =
-    findFirstImageOriginalUrl() || findGifVideoUrl() || findNativeVideoUrl();
-  if (url) {
+export function browseMediaInBackground() {
+  findMediaUrls().forEach((url) => {
     openUrlInBackground(url);
-  }
+  });
 }
 
 export function browseFirstLink() {
@@ -230,10 +228,6 @@ function findCommandsMenuLink() {
   return document.querySelector(
     '.is-selected-tweet a[rel="commandsMenu"]'
   ) as HTMLElement | null;
-}
-
-function findFirstImageOriginalUrl() {
-  return findMediaUrls()[0];
 }
 
 function findFirstLinkUrl() {

@@ -42,13 +42,13 @@ const commands: Array<Command> = [
   },
   {
     default: "alt+s",
-    description: "Browse first media",
-    name: "browseFirstMedia",
+    description: "Browse media",
+    name: "browseMedia",
   },
   {
     default: "ctrl+alt+s",
-    description: "Browse first media in background",
-    name: "browseFirstMediaInBackground",
+    description: "Browse media in background",
+    name: "browseMediaInBackground",
   },
   {
     default: "ctrl+alt+t",

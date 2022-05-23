@@ -14,8 +14,8 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 - Browse author in background (default: <kbd>Ctrl+Alt+A</kbd>)
 - Browse first link (default: <kbd>Alt+L</kbd>)
 - Browse first link in background (default: <kbd>Ctrl+Alt+L</kbd>)
-- Browse first media (default: <kbd>Alt+S</kbd>)
-- Browse first media in background (default: <kbd>Ctrl+Alt+S</kbd>)
+- Browse media (default: <kbd>Alt+S</kbd>)
+- Browse media in background (default: <kbd>Ctrl+Alt+S</kbd>)
 
 ### Select
 

@@ -64,8 +64,8 @@ export default function App() {
             "browseAuthorInBackground",
             "browseFirstLink",
             "browseFirstLinkInBackground",
-            "browseFirstMedia",
-            "browseFirstMediaInBackground",
+            "browseMedia",
+            "browseMediaInBackground",
           ]}
           category="Browse"
           keybindings={keybindings}
