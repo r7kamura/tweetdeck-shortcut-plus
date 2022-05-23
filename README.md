@@ -9,7 +9,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 ### Browse
 
 - Browse tweet (default: <kbd>alt+t</kbd>)
-- Browse in background (default: <kbd>t</kbd>)
+- Browse tweet in background (default: <kbd>t</kbd>)
 - Browse author (default: <kbd>alt+a</kbd>)
 - Browse author in background (default: <kbd>ctrl+alt+a</kbd>)
 - Browse links (default: <kbd>alt+l</kbd>)
