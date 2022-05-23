@@ -41,7 +41,7 @@ const commands: Array<Command> = [
     name: "browseMedia",
   },
   {
-    default: "ctrl+alt+s",
+    default: "m",
     description: "Browse media in background",
     name: "browseMediaInBackground",
   },
@@ -51,7 +51,7 @@ const commands: Array<Command> = [
     name: "browse",
   },
   {
-    default: "ctrl+alt+t",
+    default: "t",
     description: "Browse tweet in background",
     name: "browseInBackground",
   },
@@ -61,12 +61,12 @@ const commands: Array<Command> = [
     name: "deleteTweet",
   },
   {
-    default: "alt+j",
+    default: "i",
     description: "Download media",
     name: "downloadMedia",
   },
   {
-    default: "alt+q",
+    default: "q",
     description: "Quote tweet",
     name: "quote",
   },
@@ -101,7 +101,7 @@ const commands: Array<Command> = [
     name: "selectFirstHashTag",
   },
   {
-    default: "alt+o",
+    default: "o",
     description: "Select first image",
     name: "selectFirstImage",
   },
