@@ -38,3 +38,9 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 - Download media (default: <kbd>i</kbd>)
 - Quote tweet (default: <kbd>q</kbd>)
 - Delete tweet (default: <kbd>alt+delete</kbd>)
+
+## Configuration
+
+Customize the keyboard shortcuts as you like from options page.
+
+![](images/screenshot.png)
