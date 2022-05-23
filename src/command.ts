@@ -46,12 +46,12 @@ const commands: Array<Command> = [
     name: "browseMediaInBackground",
   },
   {
-    default: "alt+t",
+    default: "alt+b",
     description: "Browse tweet",
     name: "browse",
   },
   {
-    default: "t",
+    default: "b",
     description: "Browse tweet in background",
     name: "browseInBackground",
   },

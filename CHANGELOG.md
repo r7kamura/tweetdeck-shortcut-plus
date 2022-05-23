@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Changed
+
+- Change browse tweet default shortcut: `t` to `b`.
+- Change browse tweet default shortcut: `alt+t` to `alt+b`.
+
 ### Fixed
 
 - Don't prevent default keydown event.
