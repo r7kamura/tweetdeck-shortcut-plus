@@ -16,11 +16,6 @@ const commands: Array<Command> = [
     name: "addAuthorColumn",
   },
   {
-    default: "alt+t",
-    description: "Browse tweet",
-    name: "browse",
-  },
-  {
     default: "alt+a",
     description: "Browse author",
     name: "browseAuthor",
@@ -51,8 +46,13 @@ const commands: Array<Command> = [
     name: "browseMediaInBackground",
   },
   {
+    default: "alt+t",
+    description: "Browse tweet",
+    name: "browse",
+  },
+  {
     default: "ctrl+alt+t",
-    description: "Browse in background",
+    description: "Browse tweet in background",
     name: "browseInBackground",
   },
   {
