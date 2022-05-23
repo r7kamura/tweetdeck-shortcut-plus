@@ -139,7 +139,11 @@ function addDisplayedUserColumn() {
 }
 
 function convertRawImageUrlToOriginalImageUrl(url: string) {
-  return `${url}?name=orig`;
+  const urlObject = new URL(url);
+  const searchParams = new URLSearchParams(urlObject.search);
+  searchParams.set("name", "orig");
+  urlObject.search = searchParams.toString();
+  return urlObject.toString();
 }
 
 function createMouseOverEvent() {
@@ -271,8 +275,7 @@ function findImageUrls() {
   );
   return anchors.reduce((urls: Array<string>, anchor) => {
     const style = anchor.getAttribute("style");
-    const url = style?.match(/background-image:url\((?<url>.+)\?.*\)/)?.groups
-      ?.url;
+    const url = style?.match(/background-image:url\((?<url>.+)\)/)?.groups?.url;
     if (url) {
       urls.push(convertRawImageUrlToOriginalImageUrl(url));
     }
