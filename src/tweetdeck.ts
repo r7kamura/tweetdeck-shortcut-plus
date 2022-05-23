@@ -38,18 +38,18 @@ export function browseMediaInBackground() {
   });
 }
 
-export function browseFirstLink() {
-  const url = findFirstLinkUrl();
-  if (url) {
-    openUrlInForeground(url);
-  }
+export function browseLinks() {
+  findLinkUrls()
+    .reverse()
+    .forEach((url) => {
+      openUrlInForeground(url);
+    });
 }
 
-export function browseFirstLinkInBackground() {
-  const url = findFirstLinkUrl();
-  if (url) {
+export function browseLinksInBackground() {
+  findLinkUrls().forEach((url) => {
     openUrlInBackground(url);
-  }
+  });
 }
 
 export function browse() {
@@ -230,10 +230,16 @@ function findCommandsMenuLink() {
   ) as HTMLElement | null;
 }
 
-function findFirstLinkUrl() {
-  return document
-    .querySelector(".is-selected-tweet .js-tweet .url-ext")
-    ?.getAttribute("data-full-url");
+function findLinkUrls() {
+  return Array.from(
+    document.querySelectorAll(".is-selected-tweet .js-tweet .url-ext")
+  ).reduce((result, element) => {
+    const url = element.getAttribute("data-full-url");
+    if (url) {
+      result = [...result, url];
+    }
+    return result;
+  }, [] as string[]);
 }
 
 function findUrl() {

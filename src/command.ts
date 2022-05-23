@@ -32,13 +32,13 @@ const commands: Array<Command> = [
   },
   {
     default: "alt+l",
-    description: "Browse first link",
-    name: "browseFirstLink",
+    description: "Browse links",
+    name: "browseLinks",
   },
   {
     default: "ctrl+alt+l",
-    description: "Browse first link in background",
-    name: "browseFirstLinkInBackground",
+    description: "Browse links in background",
+    name: "browseLinksInBackground",
   },
   {
     default: "alt+s",

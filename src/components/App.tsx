@@ -62,8 +62,8 @@ export default function App() {
             "browseInBackground",
             "browseAuthor",
             "browseAuthorInBackground",
-            "browseFirstLink",
-            "browseFirstLinkInBackground",
+            "browseLinks",
+            "browseLinksInBackground",
             "browseMedia",
             "browseMediaInBackground",
           ]}
