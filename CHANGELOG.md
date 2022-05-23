@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.2.1 - 2022-05-23
+
+### Fixed
+
+- Fix version in manifest.json.
+
 ## 0.2.0 - 2022-05-23
 
 ### Changed
