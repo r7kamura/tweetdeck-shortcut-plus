@@ -8,33 +8,33 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 
 ### Browse
 
-- Browse tweet (default: <kbd>Alt+T</kbd>)
-- Browse in background (default: <kbd>Ctrl+Alt+T</kbd>)
-- Browse author (default: <kbd>Alt+A</kbd>)
-- Browse author in background (default: <kbd>Ctrl+Alt+A</kbd>)
-- Browse links (default: <kbd>Alt+L</kbd>)
-- Browse links in background (default: <kbd>Ctrl+Alt+L</kbd>)
-- Browse media (default: <kbd>Alt+S</kbd>)
-- Browse media in background (default: <kbd>Ctrl+Alt+S</kbd>)
+- Browse tweet (default: <kbd>alt+t</kbd>)
+- Browse in background (default: <kbd>ctrl+alt+t</kbd>)
+- Browse author (default: <kbd>alt+a</kbd>)
+- Browse author in background (default: <kbd>ctrl+alt+a</kbd>)
+- Browse links (default: <kbd>alt+l</kbd>)
+- Browse links in background (default: <kbd>ctrl+alt+l</kbd>)
+- Browse media (default: <kbd>alt+s</kbd>)
+- Browse media in background (default: <kbd>ctrl+alt+s</kbd>)
 
 ### Select
 
-- Select author (default: <kbd>Alt+P</kbd>)
-- Select first hashtag (default: <kbd>Alt+H</kbd>)
-- Select first image (default: <kbd>Alt+O</kbd>)
-- Select quoted tweet (default: <kbd>Alt+K</kbd>)
-- Select likes (default: <kbd>Alt+F</kbd>)
-- Select retweets (default: <kbd>Alt+R</kbd>)
-- Select activity user (default: <kbd>Alt+I</kbd>)
+- Select author (default: <kbd>alt+p</kbd>)
+- Select first hashtag (default: <kbd>alt+h</kbd>)
+- Select first image (default: <kbd>alt+o</kbd>)
+- Select quoted tweet (default: <kbd>alt+k</kbd>)
+- Select likes (default: <kbd>alt+f</kbd>)
+- Select retweets (default: <kbd>alt+r</kbd>)
+- Select activity user (default: <kbd>alt+i</kbd>)
 
 ### Column
 
-- Add author column (default: <kbd>Alt+U</kbd>)
-- Add activity user column (default: <kbd>Alt+Y</kbd>)
-- Remove column (default: <kbd>Alt+D</kbd>)
+- Add author column (default: <kbd>alt+u</kbd>)
+- Add activity user column (default: <kbd>alt+y</kbd>)
+- Remove column (default: <kbd>alt+d</kbd>)
 
 ### Others
 
-- Download media (default: <kbd>Alt+J</kbd>)
-- Quote tweet (default: <kbd>Alt+Q</kbd>)
-- Delete tweet (default: <kbd>Alt+Delete</kbd>)
+- Download media (default: <kbd>alt+j</kbd>)
+- Quote tweet (default: <kbd>alt+q</kbd>)
+- Delete tweet (default: <kbd>alt+delete</kbd>)
