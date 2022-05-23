@@ -10,9 +10,6 @@ chrome.runtime.sendMessage(
       const key = detectKeyString(event)!;
       const commandNames = keyMap[key] || [];
       runCommands(commandNames);
-      if (commandNames.length >= 1) {
-        event.preventDefault();
-      }
     });
   }
 );
