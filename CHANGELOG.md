@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+
+- Fill options page background color on large screen.
+
 ## 0.2.2 - 2022-05-23
 
 ### Fixed
