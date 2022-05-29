@@ -44,3 +44,7 @@ Browser extension to add more keyboard shortcuts to TweetDeck.
 Customize the keyboard shortcuts from options page.
 
 ![](images/screenshot.png)
+
+## Related project
+
+- <https://github.com/r7kamura/twitter-shortcut-plus>
