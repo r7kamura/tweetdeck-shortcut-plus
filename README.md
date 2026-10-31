@@ -1,5 +1,8 @@
 # TweetDeck Shortcut Plus
 
+> [!NOTE]
+> This project is archived because the external service it integrates with is no longer available, so I took that as an opportunity to archive it. If you would like to take over maintenance, please contact me somewhere.
+
 [![test](https://github.com/r7kamura/tweetdeck-shortcut-plus/actions/workflows/test.yml/badge.svg)](https://github.com/r7kamura/tweetdeck-shortcut-plus/actions/workflows/test.yml)
 
 Browser extension to add more keyboard shortcuts to TweetDeck.
